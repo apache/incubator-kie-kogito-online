@@ -1,0 +1,2 @@
+org.kie.workbench.common.dmn.showcase.client.editor.DMNDiagramEditor
+org.kie.workbench.common.dmn.showcase.client.editor.DMNDiagramEditorActivity
