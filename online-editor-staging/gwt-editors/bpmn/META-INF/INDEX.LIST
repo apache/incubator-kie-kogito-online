@@ -1,25 +1,8 @@
 JarIndex-Version: 1.0
 
 kie-wb-common-stunner-bpmn-kogito-runtime.war
+META-INF
 WEB-INF
-WEB-INF/classes
-WEB-INF/classes/META-INF
-WEB-INF/classes/META-INF/services
-WEB-INF/classes/org
-WEB-INF/classes/org/kie
-WEB-INF/classes/org/kie/workbench
-WEB-INF/classes/org/kie/workbench/common
-WEB-INF/classes/org/kie/workbench/common/stunner
-WEB-INF/classes/org/kie/workbench/common/stunner/kogito
-WEB-INF/classes/org/kie/workbench/common/stunner/kogito/client
-WEB-INF/classes/org/kie/workbench/common/stunner/kogito/client/editor
-WEB-INF/classes/org/kie/workbench/common/stunner/kogito/client/menus
-WEB-INF/classes/org/kie/workbench/common/stunner/kogito/client/perspectives
-WEB-INF/classes/org/kie/workbench/common/stunner/kogito/client/services
-WEB-INF/classes/org/uberfire
-WEB-INF/classes/org/uberfire/preferences
-WEB-INF/lib
-images
 org.kie.workbench.common.stunner.kogito.KogitoBPMNEditor
 org.kie.workbench.common.stunner.kogito.KogitoBPMNEditor/ace
 org.kie.workbench.common.stunner.kogito.KogitoBPMNEditor/ace/snippets
@@ -32,7 +15,7 @@ org.kie.workbench.common.stunner.kogito.KogitoBPMNEditor/bootstrap-select/js/i18
 org.kie.workbench.common.stunner.kogito.KogitoBPMNEditor/css
 org.kie.workbench.common.stunner.kogito.KogitoBPMNEditor/d3
 org.kie.workbench.common.stunner.kogito.KogitoBPMNEditor/deferredjs
-org.kie.workbench.common.stunner.kogito.KogitoBPMNEditor/deferredjs/2EF055C4C7EC9CD4CD8B291E12BE5DA1
+org.kie.workbench.common.stunner.kogito.KogitoBPMNEditor/deferredjs/F6F59737EB2602AB9E76FAFA4AB49470
 org.kie.workbench.common.stunner.kogito.KogitoBPMNEditor/diff2html
 org.kie.workbench.common.stunner.kogito.KogitoBPMNEditor/fonts
 org.kie.workbench.common.stunner.kogito.KogitoBPMNEditor/highlight
