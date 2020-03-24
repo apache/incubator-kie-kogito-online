@@ -2,19 +2,6 @@ JarIndex-Version: 1.0
 
 kie-wb-common-dmn-webapp-kogito-runtime.war
 WEB-INF
-WEB-INF/classes
-WEB-INF/classes/META-INF
-WEB-INF/classes/META-INF/sisu
-WEB-INF/classes/org
-WEB-INF/classes/org/kie
-WEB-INF/classes/org/kie/workbench
-WEB-INF/classes/org/kie/workbench/common
-WEB-INF/classes/org/kie/workbench/common/dmn
-WEB-INF/classes/org/kie/workbench/common/dmn/showcase
-WEB-INF/classes/org/kie/workbench/common/dmn/showcase/client
-WEB-INF/classes/org/kie/workbench/common/dmn/showcase/client/editor
-WEB-INF/classes/org/uberfire
-WEB-INF/lib
 model
 org.kie.workbench.common.dmn.showcase.DMNKogitoRuntimeWebapp
 org.kie.workbench.common.dmn.showcase.DMNKogitoRuntimeWebapp/ace
@@ -28,7 +15,7 @@ org.kie.workbench.common.dmn.showcase.DMNKogitoRuntimeWebapp/bootstrap-select/js
 org.kie.workbench.common.dmn.showcase.DMNKogitoRuntimeWebapp/css
 org.kie.workbench.common.dmn.showcase.DMNKogitoRuntimeWebapp/d3
 org.kie.workbench.common.dmn.showcase.DMNKogitoRuntimeWebapp/deferredjs
-org.kie.workbench.common.dmn.showcase.DMNKogitoRuntimeWebapp/deferredjs/4510EB9F615EDB8CAD8C0C3BE1E1C7B9
+org.kie.workbench.common.dmn.showcase.DMNKogitoRuntimeWebapp/deferredjs/B94198D469A178A55F23DBD31B5A1F13
 org.kie.workbench.common.dmn.showcase.DMNKogitoRuntimeWebapp/diff2html
 org.kie.workbench.common.dmn.showcase.DMNKogitoRuntimeWebapp/fonts
 org.kie.workbench.common.dmn.showcase.DMNKogitoRuntimeWebapp/highlight
@@ -120,4 +107,5 @@ org.kie.workbench.common.dmn.showcase.DMNKogitoRuntimeWebapp/prettify/bin
 afjs-manifest.json
 favicon.ico
 index.html
+test.html
 
