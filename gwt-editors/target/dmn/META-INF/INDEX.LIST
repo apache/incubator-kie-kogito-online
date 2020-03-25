@@ -15,7 +15,7 @@ org.kie.workbench.common.dmn.showcase.DMNKogitoRuntimeWebapp/bootstrap-select/js
 org.kie.workbench.common.dmn.showcase.DMNKogitoRuntimeWebapp/css
 org.kie.workbench.common.dmn.showcase.DMNKogitoRuntimeWebapp/d3
 org.kie.workbench.common.dmn.showcase.DMNKogitoRuntimeWebapp/deferredjs
-org.kie.workbench.common.dmn.showcase.DMNKogitoRuntimeWebapp/deferredjs/B94198D469A178A55F23DBD31B5A1F13
+org.kie.workbench.common.dmn.showcase.DMNKogitoRuntimeWebapp/deferredjs/21C01FF68EDCDEDD6A40F687BD8D2EAA
 org.kie.workbench.common.dmn.showcase.DMNKogitoRuntimeWebapp/diff2html
 org.kie.workbench.common.dmn.showcase.DMNKogitoRuntimeWebapp/fonts
 org.kie.workbench.common.dmn.showcase.DMNKogitoRuntimeWebapp/highlight
@@ -38,12 +38,17 @@ org.kie.workbench.common.dmn.showcase.DMNKogitoRuntimeWebapp/monaco-editor
 org.kie.workbench.common.dmn.showcase.DMNKogitoRuntimeWebapp/monaco-editor/dev
 org.kie.workbench.common.dmn.showcase.DMNKogitoRuntimeWebapp/monaco-editor/dev/vs
 org.kie.workbench.common.dmn.showcase.DMNKogitoRuntimeWebapp/monaco-editor/dev/vs/base
+org.kie.workbench.common.dmn.showcase.DMNKogitoRuntimeWebapp/monaco-editor/dev/vs/base/browser
+org.kie.workbench.common.dmn.showcase.DMNKogitoRuntimeWebapp/monaco-editor/dev/vs/base/browser/ui
+org.kie.workbench.common.dmn.showcase.DMNKogitoRuntimeWebapp/monaco-editor/dev/vs/base/browser/ui/codiconLabel
+org.kie.workbench.common.dmn.showcase.DMNKogitoRuntimeWebapp/monaco-editor/dev/vs/base/browser/ui/codiconLabel/codicon
 org.kie.workbench.common.dmn.showcase.DMNKogitoRuntimeWebapp/monaco-editor/dev/vs/base/worker
 org.kie.workbench.common.dmn.showcase.DMNKogitoRuntimeWebapp/monaco-editor/dev/vs/basic-languages
 org.kie.workbench.common.dmn.showcase.DMNKogitoRuntimeWebapp/monaco-editor/dev/vs/basic-languages/abap
 org.kie.workbench.common.dmn.showcase.DMNKogitoRuntimeWebapp/monaco-editor/dev/vs/basic-languages/apex
 org.kie.workbench.common.dmn.showcase.DMNKogitoRuntimeWebapp/monaco-editor/dev/vs/basic-languages/azcli
 org.kie.workbench.common.dmn.showcase.DMNKogitoRuntimeWebapp/monaco-editor/dev/vs/basic-languages/bat
+org.kie.workbench.common.dmn.showcase.DMNKogitoRuntimeWebapp/monaco-editor/dev/vs/basic-languages/cameligo
 org.kie.workbench.common.dmn.showcase.DMNKogitoRuntimeWebapp/monaco-editor/dev/vs/basic-languages/clojure
 org.kie.workbench.common.dmn.showcase.DMNKogitoRuntimeWebapp/monaco-editor/dev/vs/basic-languages/coffee
 org.kie.workbench.common.dmn.showcase.DMNKogitoRuntimeWebapp/monaco-editor/dev/vs/basic-languages/cpp
@@ -81,6 +86,7 @@ org.kie.workbench.common.dmn.showcase.DMNKogitoRuntimeWebapp/monaco-editor/dev/v
 org.kie.workbench.common.dmn.showcase.DMNKogitoRuntimeWebapp/monaco-editor/dev/vs/basic-languages/razor
 org.kie.workbench.common.dmn.showcase.DMNKogitoRuntimeWebapp/monaco-editor/dev/vs/basic-languages/redis
 org.kie.workbench.common.dmn.showcase.DMNKogitoRuntimeWebapp/monaco-editor/dev/vs/basic-languages/redshift
+org.kie.workbench.common.dmn.showcase.DMNKogitoRuntimeWebapp/monaco-editor/dev/vs/basic-languages/restructuredtext
 org.kie.workbench.common.dmn.showcase.DMNKogitoRuntimeWebapp/monaco-editor/dev/vs/basic-languages/ruby
 org.kie.workbench.common.dmn.showcase.DMNKogitoRuntimeWebapp/monaco-editor/dev/vs/basic-languages/rust
 org.kie.workbench.common.dmn.showcase.DMNKogitoRuntimeWebapp/monaco-editor/dev/vs/basic-languages/sb
