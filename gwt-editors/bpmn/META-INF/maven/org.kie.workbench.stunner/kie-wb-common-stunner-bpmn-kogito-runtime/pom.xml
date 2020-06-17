@@ -21,7 +21,7 @@
   <parent>
     <artifactId>kie-wb-common-stunner-bpmn</artifactId>
     <groupId>org.kie.workbench.stunner</groupId>
-    <version>7.38.0.Final</version>
+    <version>7.39.0-SNAPSHOT</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
@@ -710,6 +710,8 @@
           <deploy>${project.build.directory}/gwt-symbols-deploy</deploy>
           <hostedWebapp>src/main/webapp</hostedWebapp>
           <runTarget>test.html</runTarget>
+          <generateJsInteropExports>true</generateJsInteropExports>
+
           <compileSourcesArtifacts>
 
             <compileSourcesArtifact>org.kie.soup:kie-soup-commons</compileSourcesArtifact>
