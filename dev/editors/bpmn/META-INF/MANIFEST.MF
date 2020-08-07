@@ -20,7 +20,7 @@ Scm-Url: https://github.com/kiegroup/droolsjbpm-build-bootstrap/kie-wb
  n-stunner-bpmn/kie-wb-common-stunner-bpmn-kogito-runtime
 Implementation-Vendor: JBoss by Red Hat
 Os-Version: 3.10.0-1127.13.1.el7.x86_64
-Scm-Revision: 446e1fabfe723532cda341b56e371fd7a9dd7ddc
+Scm-Revision: 35e6906b132295b1244dbb6042869fd3eef505eb
 Created-By: Apache Maven 3.6.3
 Build-Jdk: 1.8.0_202
 Specification-Version: 7.42
