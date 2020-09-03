@@ -18,7 +18,7 @@ Scm-Url: https://github.com/kiegroup/droolsjbpm-build-bootstrap/kie-wb
  -common/kie-wb-common-dmn/kie-wb-common-dmn-webapp-kogito-runtime
 Implementation-Vendor: JBoss by Red Hat
 Os-Version: 3.10.0-1127.13.1.el7.x86_64
-Scm-Revision: 442ceb3d5e5bdafadbe5358f815eb6e2c0ed7ba8
+Scm-Revision: 704deea5e93dfc3fe65a9d0a65191711c3d9997a
 Created-By: Apache Maven 3.6.3
 Build-Jdk: 1.8.0_202
 Specification-Version: 7.43
