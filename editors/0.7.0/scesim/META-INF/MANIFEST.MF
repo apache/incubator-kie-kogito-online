@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Implementation-Title: Drools Workbench - Scenario Simulation Editor - 
  Kogito - Runtime Webapp
-Implementation-Version: 7.43.0.Final
+Implementation-Version: 7.43.1.Final
 Java-Version: 1.8.0_201
 Built-By: jenkins
 Scm-Connection: scm:git:https://github.com/kiegroup/droolsjbpm-build-b
@@ -19,7 +19,7 @@ Scm-Url: https://github.com/kiegroup/droolsjbpm-build-bootstrap/drools
  scenario-simulation-editor-kogito-runtime
 Implementation-Vendor: JBoss by Red Hat
 Os-Version: 3.10.0-514.el7.x86_64
-Scm-Revision: 4acdd6efcbcb3c933fd6fe59e01d9e21b9ed7235
+Scm-Revision: c1e5e6b3bd64e99933227c14f0b94713ebb6b4f7
 Created-By: Apache Maven 3.6.3
 Build-Jdk: 1.8.0_201
 Specification-Version: 7.43
