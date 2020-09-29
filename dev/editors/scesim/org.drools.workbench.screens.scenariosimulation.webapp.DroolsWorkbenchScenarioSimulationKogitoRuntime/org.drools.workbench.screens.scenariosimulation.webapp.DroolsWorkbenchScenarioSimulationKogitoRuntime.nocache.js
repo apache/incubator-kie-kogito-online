@@ -331,7 +331,7 @@ function org_drools_workbench_screens_scenariosimulation_webapp_DroolsWorkbenchS
     }
     var strongName;
     try {
-      strongName = '2CDA4EFBC4152331A14B7E7C1B300F5D';
+      strongName = 'EC13D8BEE11CDF122B4D24870FEBD3DC';
       var idx = strongName.indexOf(':');
       if (idx != -1) {
         softPermutationId = parseInt(strongName.substring(idx + 1), 10);
