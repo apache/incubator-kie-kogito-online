@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Implementation-Title: Kie Workbench - Common - DMN - Kogito runtime we
  bapp
-Implementation-Version: 7.44.0-SNAPSHOT
+Implementation-Version: 7.45.0-SNAPSHOT
 Java-Version: 1.8.0_202
 Built-By: jenkins
 Scm-Connection: scm:git:https://github.com/kiegroup/droolsjbpm-build-b
@@ -18,10 +18,10 @@ Scm-Url: https://github.com/kiegroup/droolsjbpm-build-bootstrap/kie-wb
  -common/kie-wb-common-dmn/kie-wb-common-dmn-webapp-kogito-runtime
 Implementation-Vendor: JBoss by Red Hat
 Os-Version: 3.10.0-1127.19.1.el7.x86_64
-Scm-Revision: 079e460e9347e0366eb0008579e9909ed5573b7c
+Scm-Revision: 690f3077852d5d090fd1ba15372e05e5c633a652
 Created-By: Apache Maven 3.6.3
 Build-Jdk: 1.8.0_202
-Specification-Version: 7.44
+Specification-Version: 7.45
 Implementation-URL: http://www.kiegroup.org/kie-wb-common/kie-wb-commo
  n-dmn/kie-wb-common-dmn-webapp-kogito-runtime
 
