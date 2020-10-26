@@ -73,7 +73,7 @@
       document.body.appendChild(elem);
       elem.click();
       document.body.removeChild(elem);
-      editor.stateControl.setSavedCommand();
+      editor.markAsSaved();
     });
   });
 
@@ -88,7 +88,7 @@
     });
   });
 
-  editor.stateControl.subscribe(isDirty => {
+  editor.subscribeToContentChanges(isDirty => {
     if (isDirty) {
       document.getElementById("unsavedChanges").classList.remove("hidden");
     } else {
