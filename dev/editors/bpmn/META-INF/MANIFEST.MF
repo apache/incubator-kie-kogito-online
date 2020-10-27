@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Implementation-Title: Kie Workbench - Common - Stunner - BPMN Definiti
  on Set - Kogito Runtime
-Implementation-Version: 7.45.0-SNAPSHOT
+Implementation-Version: 7.46.0-SNAPSHOT
 Java-Version: 1.8.0_202
 Built-By: jenkins
 Scm-Connection: scm:git:https://github.com/kiegroup/droolsjbpm-build-b
@@ -19,11 +19,11 @@ Scm-Url: https://github.com/kiegroup/droolsjbpm-build-bootstrap/kie-wb
  -common/kie-wb-common-stunner/kie-wb-common-stunner-sets/kie-wb-commo
  n-stunner-bpmn/kie-wb-common-stunner-bpmn-kogito-runtime
 Implementation-Vendor: JBoss by Red Hat
-Os-Version: 3.10.0-1127.19.1.el7.x86_64
-Scm-Revision: 690f3077852d5d090fd1ba15372e05e5c633a652
+Os-Version: 3.10.0-1160.2.1.el7.x86_64
+Scm-Revision: e032b472a404245dd149aaf6e205431dd56fb6ed
 Created-By: Apache Maven 3.6.3
 Build-Jdk: 1.8.0_202
-Specification-Version: 7.45
+Specification-Version: 7.46
 Implementation-URL: http://www.kiegroup.org/kie-wb-common/kie-wb-commo
  n-stunner/kie-wb-common-stunner-sets/kie-wb-common-stunner-bpmn/kie-w
  b-common-stunner-bpmn-kogito-runtime
