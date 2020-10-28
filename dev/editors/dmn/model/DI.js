@@ -18,14 +18,32 @@ var DI_Module_Factory = function () {
             typeInfo: 'DC.Bounds'
           }]
       }, {
-        localName: 'Style.Extension',
-        typeName: null,
+        localName: 'Style',
         propertyInfos: [{
-            name: 'any',
+            name: 'otherAttributes',
+            type: 'anyAttribute'
+          }, {
+            name: 'extension',
+            typeInfo: '.Style.Extension'
+          }, {
+            name: 'id',
+            typeInfo: 'ID',
+            attributeName: {
+              localPart: 'id'
+            },
+            type: 'attribute'
+          }]
+      }, {
+        localName: 'Edge',
+        baseTypeInfo: '.DiagramElement',
+        propertyInfos: [{
+            name: 'otherAttributes',
+            type: 'anyAttribute'
+          }, {
+            name: 'waypoint',
             minOccurs: 0,
             collection: true,
-            mixed: false,
-            type: 'anyElement'
+            typeInfo: 'DC.Point'
           }]
       }, {
         localName: 'Diagram',
@@ -54,32 +72,24 @@ var DI_Module_Factory = function () {
             type: 'attribute'
           }]
       }, {
-        localName: 'Edge',
-        baseTypeInfo: '.DiagramElement',
+        localName: 'Style.Extension',
+        typeName: null,
         propertyInfos: [{
-            name: 'otherAttributes',
-            type: 'anyAttribute'
-          }, {
-            name: 'waypoint',
+            name: 'any',
             minOccurs: 0,
             collection: true,
-            typeInfo: 'DC.Point'
+            mixed: false,
+            type: 'anyElement'
           }]
       }, {
-        localName: 'Style',
+        localName: 'DiagramElement.Extension',
+        typeName: null,
         propertyInfos: [{
-            name: 'otherAttributes',
-            type: 'anyAttribute'
-          }, {
-            name: 'extension',
-            typeInfo: '.Style.Extension'
-          }, {
-            name: 'id',
-            typeInfo: 'ID',
-            attributeName: {
-              localPart: 'id'
-            },
-            type: 'attribute'
+            name: 'any',
+            minOccurs: 0,
+            collection: true,
+            mixed: false,
+            type: 'anyElement'
           }]
       }, {
         localName: 'DiagramElement',
@@ -110,16 +120,6 @@ var DI_Module_Factory = function () {
               localPart: 'id'
             },
             type: 'attribute'
-          }]
-      }, {
-        localName: 'DiagramElement.Extension',
-        typeName: null,
-        propertyInfos: [{
-            name: 'any',
-            minOccurs: 0,
-            collection: true,
-            mixed: false,
-            type: 'anyElement'
           }]
       }],
     elementInfos: [{
