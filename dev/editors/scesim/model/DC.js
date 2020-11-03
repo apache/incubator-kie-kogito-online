@@ -112,11 +112,11 @@ var DC_Module_Factory = function () {
         values: ['maroon', 'red', 'orange', 'yellow', 'olive', 'purple', 'fuchsia', 'white', 'lime', 'green', 'navy', 'blue', 'aqua', 'teal', 'black', 'silver', 'gray']
       }],
     elementInfos: [{
-        typeInfo: '.Dimension',
-        elementName: 'Dimension'
-      }, {
         typeInfo: '.Color',
         elementName: 'Color'
+      }, {
+        typeInfo: '.Dimension',
+        elementName: 'Dimension'
       }, {
         typeInfo: '.Point',
         elementName: 'Point'
