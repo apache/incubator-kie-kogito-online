@@ -19,7 +19,7 @@ Scm-Url: https://github.com/kiegroup/droolsjbpm-build-bootstrap/drools
  scenario-simulation-editor-kogito-runtime
 Implementation-Vendor: JBoss by Red Hat
 Os-Version: 3.10.0-1160.2.1.el7.x86_64
-Scm-Revision: 1586207809c47c3a0ba509452cde352fadb1ab48
+Scm-Revision: 0368000493a4c49fd482218f51ba6e9ca71f4993
 Created-By: Apache Maven 3.6.3
 Build-Jdk: 1.8.0_202
 Specification-Version: 7.46
