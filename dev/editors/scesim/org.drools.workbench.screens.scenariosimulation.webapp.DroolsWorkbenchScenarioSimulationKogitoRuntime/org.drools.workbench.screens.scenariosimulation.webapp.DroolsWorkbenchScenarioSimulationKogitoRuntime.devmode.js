@@ -2,7 +2,7 @@ var $wnd = $wnd || window.parent;
 var __gwtModuleFunction = $wnd.org_drools_workbench_screens_scenariosimulation_webapp_DroolsWorkbenchScenarioSimulationKogitoRuntime;
 var $sendStats = __gwtModuleFunction.__sendStats;
 $sendStats('moduleStartup', 'moduleEvalStart');
-var $gwt_version = "2.8.2";
+var $gwt_version = "2.9.0";
 var $strongName = '';
 var $gwt = {};
 var $doc = $wnd.document;
