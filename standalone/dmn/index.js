@@ -1,1 +1,1 @@
-../0.8.5/dmn/index.js
+../0.8.6/dmn/index.js
