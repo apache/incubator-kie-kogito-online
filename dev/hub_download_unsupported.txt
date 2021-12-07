@@ -1,1 +1,0 @@
-Hub download unsupported in this distribution. If you want it, you can access the latest "Publish daily dev version" job in https://github.com/kiegroup/kogito-tooling/actions and download it in the Artifacts dropdown.
