@@ -22,6 +22,33 @@ var DC_Module_Factory = function () {
             type: 'attribute'
           }]
       }, {
+        localName: 'Color',
+        propertyInfos: [{
+            name: 'red',
+            required: true,
+            typeInfo: 'Int',
+            attributeName: {
+              localPart: 'red'
+            },
+            type: 'attribute'
+          }, {
+            name: 'green',
+            required: true,
+            typeInfo: 'Int',
+            attributeName: {
+              localPart: 'green'
+            },
+            type: 'attribute'
+          }, {
+            name: 'blue',
+            required: true,
+            typeInfo: 'Int',
+            attributeName: {
+              localPart: 'blue'
+            },
+            type: 'attribute'
+          }]
+      }, {
         localName: 'Bounds',
         propertyInfos: [{
             name: 'x',
@@ -57,33 +84,6 @@ var DC_Module_Factory = function () {
             type: 'attribute'
           }]
       }, {
-        localName: 'Color',
-        propertyInfos: [{
-            name: 'red',
-            required: true,
-            typeInfo: 'Int',
-            attributeName: {
-              localPart: 'red'
-            },
-            type: 'attribute'
-          }, {
-            name: 'green',
-            required: true,
-            typeInfo: 'Int',
-            attributeName: {
-              localPart: 'green'
-            },
-            type: 'attribute'
-          }, {
-            name: 'blue',
-            required: true,
-            typeInfo: 'Int',
-            attributeName: {
-              localPart: 'blue'
-            },
-            type: 'attribute'
-          }]
-      }, {
         localName: 'Dimension',
         propertyInfos: [{
             name: 'width',
@@ -104,22 +104,22 @@ var DC_Module_Factory = function () {
           }]
       }, {
         type: 'enumInfo',
-        localName: 'AlignmentKind',
-        values: ['start', 'end', 'center']
-      }, {
-        type: 'enumInfo',
         localName: 'KnownColor',
         values: ['maroon', 'red', 'orange', 'yellow', 'olive', 'purple', 'fuchsia', 'white', 'lime', 'green', 'navy', 'blue', 'aqua', 'teal', 'black', 'silver', 'gray']
+      }, {
+        type: 'enumInfo',
+        localName: 'AlignmentKind',
+        values: ['start', 'end', 'center']
       }],
     elementInfos: [{
+        typeInfo: '.Color',
+        elementName: 'Color'
+      }, {
         typeInfo: '.Point',
         elementName: 'Point'
       }, {
         typeInfo: '.Bounds',
         elementName: 'Bounds'
-      }, {
-        typeInfo: '.Color',
-        elementName: 'Color'
       }, {
         typeInfo: '.Dimension',
         elementName: 'Dimension'
