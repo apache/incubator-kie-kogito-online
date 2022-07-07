@@ -38,21 +38,21 @@ var DC_Module_Factory = function () {
             type: 'attribute'
           }]
       }, {
-        localName: 'Point',
+        localName: 'Dimension',
         propertyInfos: [{
-            name: 'x',
+            name: 'width',
             required: true,
             typeInfo: 'Double',
             attributeName: {
-              localPart: 'x'
+              localPart: 'width'
             },
             type: 'attribute'
           }, {
-            name: 'y',
+            name: 'height',
             required: true,
             typeInfo: 'Double',
             attributeName: {
-              localPart: 'y'
+              localPart: 'height'
             },
             type: 'attribute'
           }]
@@ -84,45 +84,45 @@ var DC_Module_Factory = function () {
             type: 'attribute'
           }]
       }, {
-        localName: 'Dimension',
+        localName: 'Point',
         propertyInfos: [{
-            name: 'width',
+            name: 'x',
             required: true,
             typeInfo: 'Double',
             attributeName: {
-              localPart: 'width'
+              localPart: 'x'
             },
             type: 'attribute'
           }, {
-            name: 'height',
+            name: 'y',
             required: true,
             typeInfo: 'Double',
             attributeName: {
-              localPart: 'height'
+              localPart: 'y'
             },
             type: 'attribute'
           }]
       }, {
         type: 'enumInfo',
-        localName: 'AlignmentKind',
-        values: ['start', 'end', 'center']
-      }, {
-        type: 'enumInfo',
         localName: 'KnownColor',
         values: ['maroon', 'red', 'orange', 'yellow', 'olive', 'purple', 'fuchsia', 'white', 'lime', 'green', 'navy', 'blue', 'aqua', 'teal', 'black', 'silver', 'gray']
+      }, {
+        type: 'enumInfo',
+        localName: 'AlignmentKind',
+        values: ['start', 'end', 'center']
       }],
     elementInfos: [{
         typeInfo: '.Dimension',
         elementName: 'Dimension'
-      }, {
-        typeInfo: '.Color',
-        elementName: 'Color'
       }, {
         typeInfo: '.Bounds',
         elementName: 'Bounds'
       }, {
         typeInfo: '.Point',
         elementName: 'Point'
+      }, {
+        typeInfo: '.Color',
+        elementName: 'Color'
       }]
   };
   return {
