@@ -3,7 +3,7 @@ var DC_Module_Factory = function () {
     name: 'DC',
     defaultElementNamespaceURI: 'http:\/\/www.omg.org\/spec\/DMN\/20180521\/DC\/',
     typeInfos: [{
-        localName: 'Bounds',
+        localName: 'Point',
         propertyInfos: [{
             name: 'x',
             required: true,
@@ -18,22 +18,6 @@ var DC_Module_Factory = function () {
             typeInfo: 'Double',
             attributeName: {
               localPart: 'y'
-            },
-            type: 'attribute'
-          }, {
-            name: 'width',
-            required: true,
-            typeInfo: 'Double',
-            attributeName: {
-              localPart: 'width'
-            },
-            type: 'attribute'
-          }, {
-            name: 'height',
-            required: true,
-            typeInfo: 'Double',
-            attributeName: {
-              localPart: 'height'
             },
             type: 'attribute'
           }]
@@ -84,7 +68,7 @@ var DC_Module_Factory = function () {
             type: 'attribute'
           }]
       }, {
-        localName: 'Point',
+        localName: 'Bounds',
         propertyInfos: [{
             name: 'x',
             required: true,
@@ -101,6 +85,22 @@ var DC_Module_Factory = function () {
               localPart: 'y'
             },
             type: 'attribute'
+          }, {
+            name: 'width',
+            required: true,
+            typeInfo: 'Double',
+            attributeName: {
+              localPart: 'width'
+            },
+            type: 'attribute'
+          }, {
+            name: 'height',
+            required: true,
+            typeInfo: 'Double',
+            attributeName: {
+              localPart: 'height'
+            },
+            type: 'attribute'
           }]
       }, {
         type: 'enumInfo',
@@ -112,14 +112,14 @@ var DC_Module_Factory = function () {
         values: ['start', 'end', 'center']
       }],
     elementInfos: [{
-        typeInfo: '.Bounds',
-        elementName: 'Bounds'
-      }, {
         typeInfo: '.Point',
         elementName: 'Point'
       }, {
         typeInfo: '.Dimension',
         elementName: 'Dimension'
+      }, {
+        typeInfo: '.Bounds',
+        elementName: 'Bounds'
       }, {
         typeInfo: '.Color',
         elementName: 'Color'
