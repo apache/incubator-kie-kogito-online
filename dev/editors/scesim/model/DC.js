@@ -104,25 +104,25 @@ var DC_Module_Factory = function () {
           }]
       }, {
         type: 'enumInfo',
-        localName: 'AlignmentKind',
-        values: ['start', 'end', 'center']
-      }, {
-        type: 'enumInfo',
         localName: 'KnownColor',
         values: ['maroon', 'red', 'orange', 'yellow', 'olive', 'purple', 'fuchsia', 'white', 'lime', 'green', 'navy', 'blue', 'aqua', 'teal', 'black', 'silver', 'gray']
+      }, {
+        type: 'enumInfo',
+        localName: 'AlignmentKind',
+        values: ['start', 'end', 'center']
       }],
     elementInfos: [{
-        typeInfo: '.Color',
-        elementName: 'Color'
-      }, {
         typeInfo: '.Point',
         elementName: 'Point'
       }, {
-        typeInfo: '.Bounds',
-        elementName: 'Bounds'
-      }, {
         typeInfo: '.Dimension',
         elementName: 'Dimension'
+      }, {
+        typeInfo: '.Color',
+        elementName: 'Color'
+      }, {
+        typeInfo: '.Bounds',
+        elementName: 'Bounds'
       }]
   };
   return {
