@@ -14,16 +14,20 @@ var DI_Module_Factory = function () {
             type: 'anyElement'
           }]
       }, {
-        localName: 'Edge',
-        baseTypeInfo: '.DiagramElement',
+        localName: 'Style',
         propertyInfos: [{
             name: 'otherAttributes',
             type: 'anyAttribute'
           }, {
-            name: 'waypoint',
-            minOccurs: 0,
-            collection: true,
-            typeInfo: 'DC.Point'
+            name: 'extension',
+            typeInfo: '.Style.Extension'
+          }, {
+            name: 'id',
+            typeInfo: 'ID',
+            attributeName: {
+              localPart: 'id'
+            },
+            type: 'attribute'
           }]
       }, {
         localName: 'Diagram',
@@ -50,6 +54,20 @@ var DI_Module_Factory = function () {
               localPart: 'resolution'
             },
             type: 'attribute'
+          }]
+      }, {
+        localName: 'Shape',
+        baseTypeInfo: '.DiagramElement',
+        propertyInfos: [{
+            name: 'otherAttributes',
+            type: 'anyAttribute'
+          }, {
+            name: 'bounds',
+            elementName: {
+              localPart: 'Bounds',
+              namespaceURI: 'http:\/\/www.omg.org\/spec\/DMN\/20180521\/DC\/'
+            },
+            typeInfo: 'DC.Bounds'
           }]
       }, {
         localName: 'DiagramElement.Extension',
@@ -92,34 +110,16 @@ var DI_Module_Factory = function () {
             type: 'attribute'
           }]
       }, {
-        localName: 'Shape',
+        localName: 'Edge',
         baseTypeInfo: '.DiagramElement',
         propertyInfos: [{
             name: 'otherAttributes',
             type: 'anyAttribute'
           }, {
-            name: 'bounds',
-            elementName: {
-              localPart: 'Bounds',
-              namespaceURI: 'http:\/\/www.omg.org\/spec\/DMN\/20180521\/DC\/'
-            },
-            typeInfo: 'DC.Bounds'
-          }]
-      }, {
-        localName: 'Style',
-        propertyInfos: [{
-            name: 'otherAttributes',
-            type: 'anyAttribute'
-          }, {
-            name: 'extension',
-            typeInfo: '.Style.Extension'
-          }, {
-            name: 'id',
-            typeInfo: 'ID',
-            attributeName: {
-              localPart: 'id'
-            },
-            type: 'attribute'
+            name: 'waypoint',
+            minOccurs: 0,
+            collection: true,
+            typeInfo: 'DC.Point'
           }]
       }],
     elementInfos: [{
