@@ -115,14 +115,14 @@ var DC_Module_Factory = function () {
         typeInfo: '.Dimension',
         elementName: 'Dimension'
       }, {
-        typeInfo: '.Color',
-        elementName: 'Color'
-      }, {
         typeInfo: '.Bounds',
         elementName: 'Bounds'
       }, {
         typeInfo: '.Point',
         elementName: 'Point'
+      }, {
+        typeInfo: '.Color',
+        elementName: 'Color'
       }]
   };
   return {
