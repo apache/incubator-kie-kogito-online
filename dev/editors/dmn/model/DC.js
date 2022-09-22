@@ -22,21 +22,29 @@ var DC_Module_Factory = function () {
             type: 'attribute'
           }]
       }, {
-        localName: 'Dimension',
+        localName: 'Color',
         propertyInfos: [{
-            name: 'width',
+            name: 'red',
             required: true,
-            typeInfo: 'Double',
+            typeInfo: 'Int',
             attributeName: {
-              localPart: 'width'
+              localPart: 'red'
             },
             type: 'attribute'
           }, {
-            name: 'height',
+            name: 'green',
             required: true,
-            typeInfo: 'Double',
+            typeInfo: 'Int',
             attributeName: {
-              localPart: 'height'
+              localPart: 'green'
+            },
+            type: 'attribute'
+          }, {
+            name: 'blue',
+            required: true,
+            typeInfo: 'Int',
+            attributeName: {
+              localPart: 'blue'
             },
             type: 'attribute'
           }]
@@ -76,29 +84,21 @@ var DC_Module_Factory = function () {
             type: 'attribute'
           }]
       }, {
-        localName: 'Color',
+        localName: 'Dimension',
         propertyInfos: [{
-            name: 'red',
+            name: 'width',
             required: true,
-            typeInfo: 'Int',
+            typeInfo: 'Double',
             attributeName: {
-              localPart: 'red'
+              localPart: 'width'
             },
             type: 'attribute'
           }, {
-            name: 'green',
+            name: 'height',
             required: true,
-            typeInfo: 'Int',
+            typeInfo: 'Double',
             attributeName: {
-              localPart: 'green'
-            },
-            type: 'attribute'
-          }, {
-            name: 'blue',
-            required: true,
-            typeInfo: 'Int',
-            attributeName: {
-              localPart: 'blue'
+              localPart: 'height'
             },
             type: 'attribute'
           }]
@@ -112,6 +112,9 @@ var DC_Module_Factory = function () {
         values: ['maroon', 'red', 'orange', 'yellow', 'olive', 'purple', 'fuchsia', 'white', 'lime', 'green', 'navy', 'blue', 'aqua', 'teal', 'black', 'silver', 'gray']
       }],
     elementInfos: [{
+        typeInfo: '.Bounds',
+        elementName: 'Bounds'
+      }, {
         typeInfo: '.Dimension',
         elementName: 'Dimension'
       }, {
@@ -120,9 +123,6 @@ var DC_Module_Factory = function () {
       }, {
         typeInfo: '.Point',
         elementName: 'Point'
-      }, {
-        typeInfo: '.Bounds',
-        elementName: 'Bounds'
       }]
   };
   return {
