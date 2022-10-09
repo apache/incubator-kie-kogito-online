@@ -112,17 +112,17 @@ var DC_Module_Factory = function () {
         values: ['maroon', 'red', 'orange', 'yellow', 'olive', 'purple', 'fuchsia', 'white', 'lime', 'green', 'navy', 'blue', 'aqua', 'teal', 'black', 'silver', 'gray']
       }],
     elementInfos: [{
-        typeInfo: '.Color',
-        elementName: 'Color'
-      }, {
-        typeInfo: '.Bounds',
-        elementName: 'Bounds'
-      }, {
         typeInfo: '.Point',
         elementName: 'Point'
       }, {
+        typeInfo: '.Color',
+        elementName: 'Color'
+      }, {
         typeInfo: '.Dimension',
         elementName: 'Dimension'
+      }, {
+        typeInfo: '.Bounds',
+        elementName: 'Bounds'
       }]
   };
   return {
