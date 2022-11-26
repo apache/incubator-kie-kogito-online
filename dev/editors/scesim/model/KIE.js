@@ -45,11 +45,11 @@ var KIE_Module_Factory = function () {
           }]
       }],
     elementInfos: [{
-        typeInfo: '.TAttachment',
-        elementName: 'attachment'
-      }, {
         typeInfo: '.TComponentsWidthsExtension',
         elementName: 'ComponentsWidthsExtension'
+      }, {
+        typeInfo: '.TAttachment',
+        elementName: 'attachment'
       }, {
         typeInfo: '.TComponentWidths',
         elementName: 'ComponentWidths'
