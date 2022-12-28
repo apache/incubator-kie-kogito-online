@@ -4,6 +4,21 @@ var DMNDI12_Module_Factory = function () {
     defaultElementNamespaceURI: 'http:\/\/www.omg.org\/spec\/DMN\/20180521\/DMNDI\/',
     dependencies: ['DI', 'DC'],
     typeInfos: [{
+        localName: 'DMNDI',
+        propertyInfos: [{
+            name: 'dmnDiagram',
+            minOccurs: 0,
+            collection: true,
+            elementName: 'DMNDiagram',
+            typeInfo: '.DMNDiagram'
+          }, {
+            name: 'dmnStyle',
+            minOccurs: 0,
+            collection: true,
+            elementName: 'DMNStyle',
+            typeInfo: '.DMNStyle'
+          }]
+      }, {
         localName: 'DMNDecisionServiceDividerLine',
         baseTypeInfo: 'DI.Edge',
         propertyInfos: [{
@@ -11,8 +26,8 @@ var DMNDI12_Module_Factory = function () {
             type: 'anyAttribute'
           }]
       }, {
-        localName: 'DMNShape',
-        baseTypeInfo: 'DI.Shape',
+        localName: 'DMNEdge',
+        baseTypeInfo: 'DI.Edge',
         propertyInfos: [{
             name: 'otherAttributes',
             type: 'anyAttribute'
@@ -21,10 +36,6 @@ var DMNDI12_Module_Factory = function () {
             elementName: 'DMNLabel',
             typeInfo: '.DMNLabel'
           }, {
-            name: 'dmnDecisionServiceDividerLine',
-            elementName: 'DMNDecisionServiceDividerLine',
-            typeInfo: '.DMNDecisionServiceDividerLine'
-          }, {
             name: 'dmnElementRef',
             required: true,
             typeInfo: 'QName',
@@ -32,20 +43,16 @@ var DMNDI12_Module_Factory = function () {
               localPart: 'dmnElementRef'
             },
             type: 'attribute'
+          }]
+      }, {
+        localName: 'DMNLabel',
+        baseTypeInfo: 'DI.Shape',
+        propertyInfos: [{
+            name: 'otherAttributes',
+            type: 'anyAttribute'
           }, {
-            name: 'isListedInputData',
-            typeInfo: 'Boolean',
-            attributeName: {
-              localPart: 'isListedInputData'
-            },
-            type: 'attribute'
-          }, {
-            name: 'isCollapsed',
-            typeInfo: 'Boolean',
-            attributeName: {
-              localPart: 'isCollapsed'
-            },
-            type: 'attribute'
+            name: 'text',
+            elementName: 'Text'
           }]
       }, {
         localName: 'DMNDiagram',
@@ -142,33 +149,8 @@ var DMNDI12_Module_Factory = function () {
             type: 'attribute'
           }]
       }, {
-        localName: 'DMNLabel',
+        localName: 'DMNShape',
         baseTypeInfo: 'DI.Shape',
-        propertyInfos: [{
-            name: 'otherAttributes',
-            type: 'anyAttribute'
-          }, {
-            name: 'text',
-            elementName: 'Text'
-          }]
-      }, {
-        localName: 'DMNDI',
-        propertyInfos: [{
-            name: 'dmnDiagram',
-            minOccurs: 0,
-            collection: true,
-            elementName: 'DMNDiagram',
-            typeInfo: '.DMNDiagram'
-          }, {
-            name: 'dmnStyle',
-            minOccurs: 0,
-            collection: true,
-            elementName: 'DMNStyle',
-            typeInfo: '.DMNStyle'
-          }]
-      }, {
-        localName: 'DMNEdge',
-        baseTypeInfo: 'DI.Edge',
         propertyInfos: [{
             name: 'otherAttributes',
             type: 'anyAttribute'
@@ -177,6 +159,10 @@ var DMNDI12_Module_Factory = function () {
             elementName: 'DMNLabel',
             typeInfo: '.DMNLabel'
           }, {
+            name: 'dmnDecisionServiceDividerLine',
+            elementName: 'DMNDecisionServiceDividerLine',
+            typeInfo: '.DMNDecisionServiceDividerLine'
+          }, {
             name: 'dmnElementRef',
             required: true,
             typeInfo: 'QName',
@@ -184,9 +170,32 @@ var DMNDI12_Module_Factory = function () {
               localPart: 'dmnElementRef'
             },
             type: 'attribute'
+          }, {
+            name: 'isListedInputData',
+            typeInfo: 'Boolean',
+            attributeName: {
+              localPart: 'isListedInputData'
+            },
+            type: 'attribute'
+          }, {
+            name: 'isCollapsed',
+            typeInfo: 'Boolean',
+            attributeName: {
+              localPart: 'isCollapsed'
+            },
+            type: 'attribute'
           }]
       }],
     elementInfos: [{
+        typeInfo: '.DMNLabel',
+        elementName: 'DMNLabel'
+      }, {
+        typeInfo: 'DI.DiagramElement',
+        elementName: 'DMNDiagramElement'
+      }, {
+        typeInfo: '.DMNDiagram',
+        elementName: 'DMNDiagram'
+      }, {
         typeInfo: '.DMNStyle',
         elementName: 'DMNStyle',
         substitutionHead: {
@@ -194,28 +203,19 @@ var DMNDI12_Module_Factory = function () {
           namespaceURI: 'http:\/\/www.omg.org\/spec\/DMN\/20180521\/DI\/'
         }
       }, {
-        typeInfo: 'DI.DiagramElement',
-        elementName: 'DMNDiagramElement'
+        typeInfo: '.DMNShape',
+        elementName: 'DMNShape',
+        substitutionHead: 'DMNDiagramElement'
+      }, {
+        typeInfo: '.DMNDecisionServiceDividerLine',
+        elementName: 'DMNDecisionServiceDividerLine'
       }, {
         typeInfo: '.DMNEdge',
         elementName: 'DMNEdge',
         substitutionHead: 'DMNDiagramElement'
       }, {
-        typeInfo: '.DMNLabel',
-        elementName: 'DMNLabel'
-      }, {
-        typeInfo: '.DMNDiagram',
-        elementName: 'DMNDiagram'
-      }, {
-        typeInfo: '.DMNDecisionServiceDividerLine',
-        elementName: 'DMNDecisionServiceDividerLine'
-      }, {
         typeInfo: '.DMNDI',
         elementName: 'DMNDI'
-      }, {
-        typeInfo: '.DMNShape',
-        elementName: 'DMNShape',
-        substitutionHead: 'DMNDiagramElement'
       }]
   };
   return {
