@@ -4,24 +4,20 @@ var DI_Module_Factory = function () {
     defaultElementNamespaceURI: 'http:\/\/www.omg.org\/spec\/DMN\/20180521\/DI\/',
     dependencies: ['DC'],
     typeInfos: [{
-        localName: 'Style.Extension',
-        typeName: null,
+        localName: 'Style',
         propertyInfos: [{
-            name: 'any',
-            minOccurs: 0,
-            collection: true,
-            mixed: false,
-            type: 'anyElement'
-          }]
-      }, {
-        localName: 'DiagramElement.Extension',
-        typeName: null,
-        propertyInfos: [{
-            name: 'any',
-            minOccurs: 0,
-            collection: true,
-            mixed: false,
-            type: 'anyElement'
+            name: 'otherAttributes',
+            type: 'anyAttribute'
+          }, {
+            name: 'extension',
+            typeInfo: '.Style.Extension'
+          }, {
+            name: 'id',
+            typeInfo: 'ID',
+            attributeName: {
+              localPart: 'id'
+            },
+            type: 'attribute'
           }]
       }, {
         localName: 'Diagram',
@@ -50,34 +46,26 @@ var DI_Module_Factory = function () {
             type: 'attribute'
           }]
       }, {
-        localName: 'Shape',
+        localName: 'Edge',
         baseTypeInfo: '.DiagramElement',
         propertyInfos: [{
             name: 'otherAttributes',
             type: 'anyAttribute'
           }, {
-            name: 'bounds',
-            elementName: {
-              localPart: 'Bounds',
-              namespaceURI: 'http:\/\/www.omg.org\/spec\/DMN\/20180521\/DC\/'
-            },
-            typeInfo: 'DC.Bounds'
+            name: 'waypoint',
+            minOccurs: 0,
+            collection: true,
+            typeInfo: 'DC.Point'
           }]
       }, {
-        localName: 'Style',
+        localName: 'DiagramElement.Extension',
+        typeName: null,
         propertyInfos: [{
-            name: 'otherAttributes',
-            type: 'anyAttribute'
-          }, {
-            name: 'extension',
-            typeInfo: '.Style.Extension'
-          }, {
-            name: 'id',
-            typeInfo: 'ID',
-            attributeName: {
-              localPart: 'id'
-            },
-            type: 'attribute'
+            name: 'any',
+            minOccurs: 0,
+            collection: true,
+            mixed: false,
+            type: 'anyElement'
           }]
       }, {
         localName: 'DiagramElement',
@@ -110,16 +98,28 @@ var DI_Module_Factory = function () {
             type: 'attribute'
           }]
       }, {
-        localName: 'Edge',
+        localName: 'Style.Extension',
+        typeName: null,
+        propertyInfos: [{
+            name: 'any',
+            minOccurs: 0,
+            collection: true,
+            mixed: false,
+            type: 'anyElement'
+          }]
+      }, {
+        localName: 'Shape',
         baseTypeInfo: '.DiagramElement',
         propertyInfos: [{
             name: 'otherAttributes',
             type: 'anyAttribute'
           }, {
-            name: 'waypoint',
-            minOccurs: 0,
-            collection: true,
-            typeInfo: 'DC.Point'
+            name: 'bounds',
+            elementName: {
+              localPart: 'Bounds',
+              namespaceURI: 'http:\/\/www.omg.org\/spec\/DMN\/20180521\/DC\/'
+            },
+            typeInfo: 'DC.Bounds'
           }]
       }],
     elementInfos: [{
