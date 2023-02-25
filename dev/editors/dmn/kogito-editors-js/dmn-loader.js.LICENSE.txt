@@ -12,7 +12,7 @@ License: MIT
 */
 
 /*!
-* focus-trap 6.2.2
+* focus-trap 6.9.2
 * @license MIT, https://github.com/focus-trap/focus-trap/blob/master/LICENSE
 */
 
