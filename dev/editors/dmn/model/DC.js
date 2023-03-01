@@ -22,6 +22,25 @@ var DC_Module_Factory = function () {
             type: 'attribute'
           }]
       }, {
+        localName: 'Dimension',
+        propertyInfos: [{
+            name: 'width',
+            required: true,
+            typeInfo: 'Double',
+            attributeName: {
+              localPart: 'width'
+            },
+            type: 'attribute'
+          }, {
+            name: 'height',
+            required: true,
+            typeInfo: 'Double',
+            attributeName: {
+              localPart: 'height'
+            },
+            type: 'attribute'
+          }]
+      }, {
         localName: 'Bounds',
         propertyInfos: [{
             name: 'x',
@@ -40,25 +59,6 @@ var DC_Module_Factory = function () {
             },
             type: 'attribute'
           }, {
-            name: 'width',
-            required: true,
-            typeInfo: 'Double',
-            attributeName: {
-              localPart: 'width'
-            },
-            type: 'attribute'
-          }, {
-            name: 'height',
-            required: true,
-            typeInfo: 'Double',
-            attributeName: {
-              localPart: 'height'
-            },
-            type: 'attribute'
-          }]
-      }, {
-        localName: 'Dimension',
-        propertyInfos: [{
             name: 'width',
             required: true,
             typeInfo: 'Double',
@@ -112,17 +112,17 @@ var DC_Module_Factory = function () {
         values: ['maroon', 'red', 'orange', 'yellow', 'olive', 'purple', 'fuchsia', 'white', 'lime', 'green', 'navy', 'blue', 'aqua', 'teal', 'black', 'silver', 'gray']
       }],
     elementInfos: [{
-        typeInfo: '.Color',
-        elementName: 'Color'
+        typeInfo: '.Point',
+        elementName: 'Point'
       }, {
         typeInfo: '.Bounds',
         elementName: 'Bounds'
       }, {
-        typeInfo: '.Point',
-        elementName: 'Point'
-      }, {
         typeInfo: '.Dimension',
         elementName: 'Dimension'
+      }, {
+        typeInfo: '.Color',
+        elementName: 'Color'
       }]
   };
   return {
