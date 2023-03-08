@@ -3,7 +3,7 @@ var DC_Module_Factory = function () {
     name: 'DC',
     defaultElementNamespaceURI: 'http:\/\/www.omg.org\/spec\/DMN\/20180521\/DC\/',
     typeInfos: [{
-        localName: 'Bounds',
+        localName: 'Point',
         propertyInfos: [{
             name: 'x',
             required: true,
@@ -20,7 +20,10 @@ var DC_Module_Factory = function () {
               localPart: 'y'
             },
             type: 'attribute'
-          }, {
+          }]
+      }, {
+        localName: 'Dimension',
+        propertyInfos: [{
             name: 'width',
             required: true,
             typeInfo: 'Double',
@@ -65,7 +68,7 @@ var DC_Module_Factory = function () {
             type: 'attribute'
           }]
       }, {
-        localName: 'Point',
+        localName: 'Bounds',
         propertyInfos: [{
             name: 'x',
             required: true,
@@ -82,10 +85,7 @@ var DC_Module_Factory = function () {
               localPart: 'y'
             },
             type: 'attribute'
-          }]
-      }, {
-        localName: 'Dimension',
-        propertyInfos: [{
+          }, {
             name: 'width',
             required: true,
             typeInfo: 'Double',
@@ -112,17 +112,17 @@ var DC_Module_Factory = function () {
         values: ['maroon', 'red', 'orange', 'yellow', 'olive', 'purple', 'fuchsia', 'white', 'lime', 'green', 'navy', 'blue', 'aqua', 'teal', 'black', 'silver', 'gray']
       }],
     elementInfos: [{
-        typeInfo: '.Bounds',
-        elementName: 'Bounds'
-      }, {
-        typeInfo: '.Point',
-        elementName: 'Point'
-      }, {
         typeInfo: '.Color',
         elementName: 'Color'
       }, {
         typeInfo: '.Dimension',
         elementName: 'Dimension'
+      }, {
+        typeInfo: '.Bounds',
+        elementName: 'Bounds'
+      }, {
+        typeInfo: '.Point',
+        elementName: 'Point'
       }]
   };
   return {
