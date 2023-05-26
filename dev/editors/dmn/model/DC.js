@@ -3,25 +3,6 @@ var DC_Module_Factory = function () {
     name: 'DC',
     defaultElementNamespaceURI: 'http:\/\/www.omg.org\/spec\/DMN\/20180521\/DC\/',
     typeInfos: [{
-        localName: 'Point',
-        propertyInfos: [{
-            name: 'x',
-            required: true,
-            typeInfo: 'Double',
-            attributeName: {
-              localPart: 'x'
-            },
-            type: 'attribute'
-          }, {
-            name: 'y',
-            required: true,
-            typeInfo: 'Double',
-            attributeName: {
-              localPart: 'y'
-            },
-            type: 'attribute'
-          }]
-      }, {
         localName: 'Color',
         propertyInfos: [{
             name: 'red',
@@ -64,6 +45,25 @@ var DC_Module_Factory = function () {
             typeInfo: 'Double',
             attributeName: {
               localPart: 'height'
+            },
+            type: 'attribute'
+          }]
+      }, {
+        localName: 'Point',
+        propertyInfos: [{
+            name: 'x',
+            required: true,
+            typeInfo: 'Double',
+            attributeName: {
+              localPart: 'x'
+            },
+            type: 'attribute'
+          }, {
+            name: 'y',
+            required: true,
+            typeInfo: 'Double',
+            attributeName: {
+              localPart: 'y'
             },
             type: 'attribute'
           }]
@@ -115,14 +115,14 @@ var DC_Module_Factory = function () {
         typeInfo: '.Bounds',
         elementName: 'Bounds'
       }, {
+        typeInfo: '.Dimension',
+        elementName: 'Dimension'
+      }, {
         typeInfo: '.Color',
         elementName: 'Color'
       }, {
         typeInfo: '.Point',
         elementName: 'Point'
-      }, {
-        typeInfo: '.Dimension',
-        elementName: 'Dimension'
       }]
   };
   return {
