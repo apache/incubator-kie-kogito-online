@@ -12,21 +12,6 @@ var DMN12_Module_Factory = function () {
             type: 'anyAttribute'
           }]
       }, {
-        localName: 'TInputClause',
-        typeName: 'tInputClause',
-        baseTypeInfo: '.TDMNElement',
-        propertyInfos: [{
-            name: 'otherAttributes',
-            type: 'anyAttribute'
-          }, {
-            name: 'inputExpression',
-            required: true,
-            typeInfo: '.TLiteralExpression'
-          }, {
-            name: 'inputValues',
-            typeInfo: '.TUnaryTests'
-          }]
-      }, {
         localName: 'TLiteralExpression',
         typeName: 'tLiteralExpression',
         baseTypeInfo: '.TExpression',
@@ -48,23 +33,395 @@ var DMN12_Module_Factory = function () {
             type: 'attribute'
           }]
       }, {
-        localName: 'TInvocation',
-        typeName: 'tInvocation',
+        localName: 'TContextEntry',
+        typeName: 'tContextEntry',
+        baseTypeInfo: '.TDMNElement',
+        propertyInfos: [{
+            name: 'otherAttributes',
+            type: 'anyAttribute'
+          }, {
+            name: 'variable',
+            typeInfo: '.TInformationItem'
+          }, {
+            name: 'expression',
+            required: true,
+            mixed: false,
+            allowDom: false,
+            typeInfo: '.TExpression',
+            type: 'elementRef'
+          }]
+      }, {
+        localName: 'TDMNElement.ExtensionElements',
+        typeName: null,
+        propertyInfos: [{
+            name: 'any',
+            minOccurs: 0,
+            collection: true,
+            mixed: false,
+            type: 'anyElement'
+          }]
+      }, {
+        localName: 'TElementCollection',
+        typeName: 'tElementCollection',
+        baseTypeInfo: '.TNamedElement',
+        propertyInfos: [{
+            name: 'otherAttributes',
+            type: 'anyAttribute'
+          }, {
+            name: 'drgElement',
+            minOccurs: 0,
+            collection: true,
+            typeInfo: '.TDMNElementReference'
+          }]
+      }, {
+        localName: 'TBusinessKnowledgeModel',
+        typeName: 'tBusinessKnowledgeModel',
+        baseTypeInfo: '.TInvocable',
+        propertyInfos: [{
+            name: 'otherAttributes',
+            type: 'anyAttribute'
+          }, {
+            name: 'encapsulatedLogic',
+            typeInfo: '.TFunctionDefinition'
+          }, {
+            name: 'knowledgeRequirement',
+            minOccurs: 0,
+            collection: true,
+            typeInfo: '.TKnowledgeRequirement'
+          }, {
+            name: 'authorityRequirement',
+            minOccurs: 0,
+            collection: true,
+            typeInfo: '.TAuthorityRequirement'
+          }]
+      }, {
+        localName: 'TPerformanceIndicator',
+        typeName: 'tPerformanceIndicator',
+        baseTypeInfo: '.TBusinessContextElement',
+        propertyInfos: [{
+            name: 'otherAttributes',
+            type: 'anyAttribute'
+          }, {
+            name: 'impactingDecision',
+            minOccurs: 0,
+            collection: true,
+            typeInfo: '.TDMNElementReference'
+          }]
+      }, {
+        localName: 'TRuleAnnotationClause',
+        typeName: 'tRuleAnnotationClause',
+        propertyInfos: [{
+            name: 'name',
+            attributeName: {
+              localPart: 'name'
+            },
+            type: 'attribute'
+          }]
+      }, {
+        localName: 'TInputData',
+        typeName: 'tInputData',
+        baseTypeInfo: '.TDRGElement',
+        propertyInfos: [{
+            name: 'otherAttributes',
+            type: 'anyAttribute'
+          }, {
+            name: 'variable',
+            typeInfo: '.TInformationItem'
+          }]
+      }, {
+        localName: 'TRuleAnnotation',
+        typeName: 'tRuleAnnotation',
+        propertyInfos: [{
+            name: 'text'
+          }]
+      }, {
+        localName: 'TOutputClause',
+        typeName: 'tOutputClause',
+        baseTypeInfo: '.TDMNElement',
+        propertyInfos: [{
+            name: 'otherAttributes',
+            type: 'anyAttribute'
+          }, {
+            name: 'outputValues',
+            typeInfo: '.TUnaryTests'
+          }, {
+            name: 'defaultOutputEntry',
+            typeInfo: '.TLiteralExpression'
+          }, {
+            name: 'name',
+            attributeName: {
+              localPart: 'name'
+            },
+            type: 'attribute'
+          }, {
+            name: 'typeRef',
+            attributeName: {
+              localPart: 'typeRef'
+            },
+            type: 'attribute'
+          }]
+      }, {
+        localName: 'TDMNElement',
+        typeName: 'tDMNElement',
+        propertyInfos: [{
+            name: 'otherAttributes',
+            type: 'anyAttribute'
+          }, {
+            name: 'description'
+          }, {
+            name: 'extensionElements',
+            typeInfo: '.TDMNElement.ExtensionElements'
+          }, {
+            name: 'id',
+            typeInfo: 'ID',
+            attributeName: {
+              localPart: 'id'
+            },
+            type: 'attribute'
+          }, {
+            name: 'label',
+            attributeName: {
+              localPart: 'label'
+            },
+            type: 'attribute'
+          }]
+      }, {
+        localName: 'TInformationRequirement',
+        typeName: 'tInformationRequirement',
+        baseTypeInfo: '.TDMNElement',
+        propertyInfos: [{
+            name: 'otherAttributes',
+            type: 'anyAttribute'
+          }, {
+            name: 'requiredDecision',
+            required: true,
+            typeInfo: '.TDMNElementReference'
+          }, {
+            name: 'requiredInput',
+            required: true,
+            typeInfo: '.TDMNElementReference'
+          }]
+      }, {
+        localName: 'TImportedValues',
+        typeName: 'tImportedValues',
+        baseTypeInfo: '.TImport',
+        propertyInfos: [{
+            name: 'otherAttributes',
+            type: 'anyAttribute'
+          }, {
+            name: 'importedElement',
+            required: true
+          }, {
+            name: 'expressionLanguage',
+            attributeName: {
+              localPart: 'expressionLanguage'
+            },
+            type: 'attribute'
+          }]
+      }, {
+        localName: 'TArtifact',
+        typeName: 'tArtifact',
+        baseTypeInfo: '.TDMNElement',
+        propertyInfos: [{
+            name: 'otherAttributes',
+            type: 'anyAttribute'
+          }]
+      }, {
+        localName: 'TItemDefinition',
+        typeName: 'tItemDefinition',
+        baseTypeInfo: '.TNamedElement',
+        propertyInfos: [{
+            name: 'otherAttributes',
+            type: 'anyAttribute'
+          }, {
+            name: 'typeRef',
+            required: true
+          }, {
+            name: 'allowedValues',
+            typeInfo: '.TUnaryTests'
+          }, {
+            name: 'itemComponent',
+            minOccurs: 0,
+            collection: true,
+            typeInfo: '.TItemDefinition'
+          }, {
+            name: 'typeLanguage',
+            attributeName: {
+              localPart: 'typeLanguage'
+            },
+            type: 'attribute'
+          }, {
+            name: 'isCollection',
+            typeInfo: 'Boolean',
+            attributeName: {
+              localPart: 'isCollection'
+            },
+            type: 'attribute'
+          }]
+      }, {
+        localName: 'TDecisionRule',
+        typeName: 'tDecisionRule',
+        baseTypeInfo: '.TDMNElement',
+        propertyInfos: [{
+            name: 'otherAttributes',
+            type: 'anyAttribute'
+          }, {
+            name: 'inputEntry',
+            minOccurs: 0,
+            collection: true,
+            typeInfo: '.TUnaryTests'
+          }, {
+            name: 'outputEntry',
+            required: true,
+            collection: true,
+            typeInfo: '.TLiteralExpression'
+          }, {
+            name: 'annotationEntry',
+            minOccurs: 0,
+            collection: true,
+            typeInfo: '.TRuleAnnotation'
+          }]
+      }, {
+        localName: 'TDecisionTable',
+        typeName: 'tDecisionTable',
         baseTypeInfo: '.TExpression',
         propertyInfos: [{
             name: 'otherAttributes',
             type: 'anyAttribute'
+          }, {
+            name: 'input',
+            minOccurs: 0,
+            collection: true,
+            typeInfo: '.TInputClause'
+          }, {
+            name: 'output',
+            required: true,
+            collection: true,
+            typeInfo: '.TOutputClause'
+          }, {
+            name: 'annotation',
+            minOccurs: 0,
+            collection: true,
+            typeInfo: '.TRuleAnnotationClause'
+          }, {
+            name: 'rule',
+            minOccurs: 0,
+            collection: true,
+            typeInfo: '.TDecisionRule'
+          }, {
+            name: 'hitPolicy',
+            typeInfo: '.THitPolicy',
+            attributeName: {
+              localPart: 'hitPolicy'
+            },
+            type: 'attribute'
+          }, {
+            name: 'aggregation',
+            typeInfo: '.TBuiltinAggregator',
+            attributeName: {
+              localPart: 'aggregation'
+            },
+            type: 'attribute'
+          }, {
+            name: 'preferredOrientation',
+            typeInfo: '.TDecisionTableOrientation',
+            attributeName: {
+              localPart: 'preferredOrientation'
+            },
+            type: 'attribute'
+          }, {
+            name: 'outputLabel',
+            attributeName: {
+              localPart: 'outputLabel'
+            },
+            type: 'attribute'
+          }]
+      }, {
+        localName: 'TOrganizationUnit',
+        typeName: 'tOrganizationUnit',
+        baseTypeInfo: '.TBusinessContextElement',
+        propertyInfos: [{
+            name: 'otherAttributes',
+            type: 'anyAttribute'
+          }, {
+            name: 'decisionMade',
+            minOccurs: 0,
+            collection: true,
+            typeInfo: '.TDMNElementReference'
+          }, {
+            name: 'decisionOwned',
+            minOccurs: 0,
+            collection: true,
+            typeInfo: '.TDMNElementReference'
+          }]
+      }, {
+        localName: 'TUnaryTests',
+        typeName: 'tUnaryTests',
+        baseTypeInfo: '.TDMNElement',
+        propertyInfos: [{
+            name: 'otherAttributes',
+            type: 'anyAttribute'
+          }, {
+            name: 'text',
+            required: true
+          }, {
+            name: 'expressionLanguage',
+            attributeName: {
+              localPart: 'expressionLanguage'
+            },
+            type: 'attribute'
+          }]
+      }, {
+        localName: 'TRelation',
+        typeName: 'tRelation',
+        baseTypeInfo: '.TExpression',
+        propertyInfos: [{
+            name: 'otherAttributes',
+            type: 'anyAttribute'
+          }, {
+            name: 'column',
+            minOccurs: 0,
+            collection: true,
+            typeInfo: '.TInformationItem'
+          }, {
+            name: 'row',
+            minOccurs: 0,
+            collection: true,
+            typeInfo: '.TList'
+          }]
+      }, {
+        localName: 'TBinding',
+        typeName: 'tBinding',
+        propertyInfos: [{
+            name: 'parameter',
+            required: true,
+            typeInfo: '.TInformationItem'
           }, {
             name: 'expression',
             mixed: false,
             allowDom: false,
             typeInfo: '.TExpression',
             type: 'elementRef'
+          }]
+      }, {
+        localName: 'TAuthorityRequirement',
+        typeName: 'tAuthorityRequirement',
+        baseTypeInfo: '.TDMNElement',
+        propertyInfos: [{
+            name: 'otherAttributes',
+            type: 'anyAttribute'
           }, {
-            name: 'binding',
-            minOccurs: 0,
-            collection: true,
-            typeInfo: '.TBinding'
+            name: 'requiredDecision',
+            required: true,
+            typeInfo: '.TDMNElementReference'
+          }, {
+            name: 'requiredInput',
+            required: true,
+            typeInfo: '.TDMNElementReference'
+          }, {
+            name: 'requiredAuthority',
+            required: true,
+            typeInfo: '.TDMNElementReference'
           }]
       }, {
         localName: 'TDefinitions',
@@ -153,131 +510,6 @@ var DMN12_Module_Factory = function () {
             type: 'attribute'
           }]
       }, {
-        localName: 'TRuleAnnotationClause',
-        typeName: 'tRuleAnnotationClause',
-        propertyInfos: [{
-            name: 'name',
-            attributeName: {
-              localPart: 'name'
-            },
-            type: 'attribute'
-          }]
-      }, {
-        localName: 'TPerformanceIndicator',
-        typeName: 'tPerformanceIndicator',
-        baseTypeInfo: '.TBusinessContextElement',
-        propertyInfos: [{
-            name: 'otherAttributes',
-            type: 'anyAttribute'
-          }, {
-            name: 'impactingDecision',
-            minOccurs: 0,
-            collection: true,
-            typeInfo: '.TDMNElementReference'
-          }]
-      }, {
-        localName: 'TImport',
-        typeName: 'tImport',
-        baseTypeInfo: '.TNamedElement',
-        propertyInfos: [{
-            name: 'otherAttributes',
-            type: 'anyAttribute'
-          }, {
-            name: 'namespace',
-            required: true,
-            attributeName: {
-              localPart: 'namespace'
-            },
-            type: 'attribute'
-          }, {
-            name: 'locationURI',
-            attributeName: {
-              localPart: 'locationURI'
-            },
-            type: 'attribute'
-          }, {
-            name: 'importType',
-            required: true,
-            attributeName: {
-              localPart: 'importType'
-            },
-            type: 'attribute'
-          }]
-      }, {
-        localName: 'TImportedValues',
-        typeName: 'tImportedValues',
-        baseTypeInfo: '.TImport',
-        propertyInfos: [{
-            name: 'otherAttributes',
-            type: 'anyAttribute'
-          }, {
-            name: 'importedElement',
-            required: true
-          }, {
-            name: 'expressionLanguage',
-            attributeName: {
-              localPart: 'expressionLanguage'
-            },
-            type: 'attribute'
-          }]
-      }, {
-        localName: 'TBusinessContextElement',
-        typeName: 'tBusinessContextElement',
-        baseTypeInfo: '.TNamedElement',
-        propertyInfos: [{
-            name: 'otherAttributes',
-            type: 'anyAttribute'
-          }, {
-            name: 'uri',
-            attributeName: {
-              localPart: 'URI'
-            },
-            type: 'attribute'
-          }]
-      }, {
-        localName: 'TDMNElement',
-        typeName: 'tDMNElement',
-        propertyInfos: [{
-            name: 'otherAttributes',
-            type: 'anyAttribute'
-          }, {
-            name: 'description'
-          }, {
-            name: 'extensionElements',
-            typeInfo: '.TDMNElement.ExtensionElements'
-          }, {
-            name: 'id',
-            typeInfo: 'ID',
-            attributeName: {
-              localPart: 'id'
-            },
-            type: 'attribute'
-          }, {
-            name: 'label',
-            attributeName: {
-              localPart: 'label'
-            },
-            type: 'attribute'
-          }]
-      }, {
-        localName: 'TRelation',
-        typeName: 'tRelation',
-        baseTypeInfo: '.TExpression',
-        propertyInfos: [{
-            name: 'otherAttributes',
-            type: 'anyAttribute'
-          }, {
-            name: 'column',
-            minOccurs: 0,
-            collection: true,
-            typeInfo: '.TInformationItem'
-          }, {
-            name: 'row',
-            minOccurs: 0,
-            collection: true,
-            typeInfo: '.TList'
-          }]
-      }, {
         localName: 'TDecisionService',
         typeName: 'tDecisionService',
         baseTypeInfo: '.TInvocable',
@@ -306,33 +538,26 @@ var DMN12_Module_Factory = function () {
             typeInfo: '.TDMNElementReference'
           }]
       }, {
-        localName: 'TArtifact',
-        typeName: 'tArtifact',
-        baseTypeInfo: '.TDMNElement',
+        localName: 'TDMNElementReference',
+        typeName: 'tDMNElementReference',
         propertyInfos: [{
-            name: 'otherAttributes',
-            type: 'anyAttribute'
+            name: 'href',
+            required: true,
+            attributeName: {
+              localPart: 'href'
+            },
+            type: 'attribute'
           }]
       }, {
-        localName: 'TBusinessKnowledgeModel',
-        typeName: 'tBusinessKnowledgeModel',
-        baseTypeInfo: '.TInvocable',
+        localName: 'TInvocable',
+        typeName: 'tInvocable',
+        baseTypeInfo: '.TDRGElement',
         propertyInfos: [{
             name: 'otherAttributes',
             type: 'anyAttribute'
           }, {
-            name: 'encapsulatedLogic',
-            typeInfo: '.TFunctionDefinition'
-          }, {
-            name: 'knowledgeRequirement',
-            minOccurs: 0,
-            collection: true,
-            typeInfo: '.TKnowledgeRequirement'
-          }, {
-            name: 'authorityRequirement',
-            minOccurs: 0,
-            collection: true,
-            typeInfo: '.TAuthorityRequirement'
+            name: 'variable',
+            typeInfo: '.TInformationItem'
           }]
       }, {
         localName: 'TFunctionDefinition',
@@ -361,36 +586,17 @@ var DMN12_Module_Factory = function () {
             type: 'attribute'
           }]
       }, {
-        localName: 'TInformationItem',
-        typeName: 'tInformationItem',
-        baseTypeInfo: '.TNamedElement',
+        localName: 'TContext',
+        typeName: 'tContext',
+        baseTypeInfo: '.TExpression',
         propertyInfos: [{
             name: 'otherAttributes',
             type: 'anyAttribute'
           }, {
-            name: 'typeRef',
-            attributeName: {
-              localPart: 'typeRef'
-            },
-            type: 'attribute'
-          }]
-      }, {
-        localName: 'TOrganizationUnit',
-        typeName: 'tOrganizationUnit',
-        baseTypeInfo: '.TBusinessContextElement',
-        propertyInfos: [{
-            name: 'otherAttributes',
-            type: 'anyAttribute'
-          }, {
-            name: 'decisionMade',
+            name: 'contextEntry',
             minOccurs: 0,
             collection: true,
-            typeInfo: '.TDMNElementReference'
-          }, {
-            name: 'decisionOwned',
-            minOccurs: 0,
-            collection: true,
-            typeInfo: '.TDMNElementReference'
+            typeInfo: '.TContextEntry'
           }]
       }, {
         localName: 'TExpression',
@@ -405,19 +611,6 @@ var DMN12_Module_Factory = function () {
               localPart: 'typeRef'
             },
             type: 'attribute'
-          }]
-      }, {
-        localName: 'TContext',
-        typeName: 'tContext',
-        baseTypeInfo: '.TExpression',
-        propertyInfos: [{
-            name: 'otherAttributes',
-            type: 'anyAttribute'
-          }, {
-            name: 'contextEntry',
-            minOccurs: 0,
-            collection: true,
-            typeInfo: '.TContextEntry'
           }]
       }, {
         localName: 'TTextAnnotation',
@@ -436,104 +629,19 @@ var DMN12_Module_Factory = function () {
             type: 'attribute'
           }]
       }, {
-        localName: 'TKnowledgeSource',
-        typeName: 'tKnowledgeSource',
-        baseTypeInfo: '.TDRGElement',
-        propertyInfos: [{
-            name: 'otherAttributes',
-            type: 'anyAttribute'
-          }, {
-            name: 'authorityRequirement',
-            minOccurs: 0,
-            collection: true,
-            typeInfo: '.TAuthorityRequirement'
-          }, {
-            name: 'type'
-          }, {
-            name: 'owner',
-            typeInfo: '.TDMNElementReference'
-          }, {
-            name: 'locationURI',
-            attributeName: {
-              localPart: 'locationURI'
-            },
-            type: 'attribute'
-          }]
-      }, {
-        localName: 'TItemDefinition',
-        typeName: 'tItemDefinition',
-        baseTypeInfo: '.TNamedElement',
-        propertyInfos: [{
-            name: 'otherAttributes',
-            type: 'anyAttribute'
-          }, {
-            name: 'typeRef',
-            required: true
-          }, {
-            name: 'allowedValues',
-            typeInfo: '.TUnaryTests'
-          }, {
-            name: 'itemComponent',
-            minOccurs: 0,
-            collection: true,
-            typeInfo: '.TItemDefinition'
-          }, {
-            name: 'typeLanguage',
-            attributeName: {
-              localPart: 'typeLanguage'
-            },
-            type: 'attribute'
-          }, {
-            name: 'isCollection',
-            typeInfo: 'Boolean',
-            attributeName: {
-              localPart: 'isCollection'
-            },
-            type: 'attribute'
-          }]
-      }, {
-        localName: 'TInputData',
-        typeName: 'tInputData',
-        baseTypeInfo: '.TDRGElement',
-        propertyInfos: [{
-            name: 'otherAttributes',
-            type: 'anyAttribute'
-          }, {
-            name: 'variable',
-            typeInfo: '.TInformationItem'
-          }]
-      }, {
-        localName: 'TInformationRequirement',
-        typeName: 'tInformationRequirement',
+        localName: 'TInputClause',
+        typeName: 'tInputClause',
         baseTypeInfo: '.TDMNElement',
         propertyInfos: [{
             name: 'otherAttributes',
             type: 'anyAttribute'
           }, {
-            name: 'requiredDecision',
+            name: 'inputExpression',
             required: true,
-            typeInfo: '.TDMNElementReference'
+            typeInfo: '.TLiteralExpression'
           }, {
-            name: 'requiredInput',
-            required: true,
-            typeInfo: '.TDMNElementReference'
-          }]
-      }, {
-        localName: 'TDMNElementReference',
-        typeName: 'tDMNElementReference',
-        propertyInfos: [{
-            name: 'href',
-            required: true,
-            attributeName: {
-              localPart: 'href'
-            },
-            type: 'attribute'
-          }]
-      }, {
-        localName: 'TRuleAnnotation',
-        typeName: 'tRuleAnnotation',
-        propertyInfos: [{
-            name: 'text'
+            name: 'inputValues',
+            typeInfo: '.TUnaryTests'
           }]
       }, {
         localName: 'TKnowledgeRequirement',
@@ -546,82 +654,6 @@ var DMN12_Module_Factory = function () {
             name: 'requiredKnowledge',
             required: true,
             typeInfo: '.TDMNElementReference'
-          }]
-      }, {
-        localName: 'TAuthorityRequirement',
-        typeName: 'tAuthorityRequirement',
-        baseTypeInfo: '.TDMNElement',
-        propertyInfos: [{
-            name: 'otherAttributes',
-            type: 'anyAttribute'
-          }, {
-            name: 'requiredDecision',
-            required: true,
-            typeInfo: '.TDMNElementReference'
-          }, {
-            name: 'requiredInput',
-            required: true,
-            typeInfo: '.TDMNElementReference'
-          }, {
-            name: 'requiredAuthority',
-            required: true,
-            typeInfo: '.TDMNElementReference'
-          }]
-      }, {
-        localName: 'TInvocable',
-        typeName: 'tInvocable',
-        baseTypeInfo: '.TDRGElement',
-        propertyInfos: [{
-            name: 'otherAttributes',
-            type: 'anyAttribute'
-          }, {
-            name: 'variable',
-            typeInfo: '.TInformationItem'
-          }]
-      }, {
-        localName: 'TElementCollection',
-        typeName: 'tElementCollection',
-        baseTypeInfo: '.TNamedElement',
-        propertyInfos: [{
-            name: 'otherAttributes',
-            type: 'anyAttribute'
-          }, {
-            name: 'drgElement',
-            minOccurs: 0,
-            collection: true,
-            typeInfo: '.TDMNElementReference'
-          }]
-      }, {
-        localName: 'TNamedElement',
-        typeName: 'tNamedElement',
-        baseTypeInfo: '.TDMNElement',
-        propertyInfos: [{
-            name: 'otherAttributes',
-            type: 'anyAttribute'
-          }, {
-            name: 'name',
-            required: true,
-            attributeName: {
-              localPart: 'name'
-            },
-            type: 'attribute'
-          }]
-      }, {
-        localName: 'TUnaryTests',
-        typeName: 'tUnaryTests',
-        baseTypeInfo: '.TDMNElement',
-        propertyInfos: [{
-            name: 'otherAttributes',
-            type: 'anyAttribute'
-          }, {
-            name: 'text',
-            required: true
-          }, {
-            name: 'expressionLanguage',
-            attributeName: {
-              localPart: 'expressionLanguage'
-            },
-            type: 'attribute'
           }]
       }, {
         localName: 'TList',
@@ -638,30 +670,6 @@ var DMN12_Module_Factory = function () {
             allowDom: false,
             typeInfo: '.TExpression',
             type: 'elementRef'
-          }]
-      }, {
-        localName: 'TBinding',
-        typeName: 'tBinding',
-        propertyInfos: [{
-            name: 'parameter',
-            required: true,
-            typeInfo: '.TInformationItem'
-          }, {
-            name: 'expression',
-            mixed: false,
-            allowDom: false,
-            typeInfo: '.TExpression',
-            type: 'elementRef'
-          }]
-      }, {
-        localName: 'TDMNElement.ExtensionElements',
-        typeName: null,
-        propertyInfos: [{
-            name: 'any',
-            minOccurs: 0,
-            collection: true,
-            mixed: false,
-            type: 'anyElement'
           }]
       }, {
         localName: 'TDecision',
@@ -730,28 +738,35 @@ var DMN12_Module_Factory = function () {
             type: 'elementRef'
           }]
       }, {
-        localName: 'TOutputClause',
-        typeName: 'tOutputClause',
-        baseTypeInfo: '.TDMNElement',
+        localName: 'TInvocation',
+        typeName: 'tInvocation',
+        baseTypeInfo: '.TExpression',
         propertyInfos: [{
             name: 'otherAttributes',
             type: 'anyAttribute'
           }, {
-            name: 'outputValues',
-            typeInfo: '.TUnaryTests'
+            name: 'expression',
+            mixed: false,
+            allowDom: false,
+            typeInfo: '.TExpression',
+            type: 'elementRef'
           }, {
-            name: 'defaultOutputEntry',
-            typeInfo: '.TLiteralExpression'
+            name: 'binding',
+            minOccurs: 0,
+            collection: true,
+            typeInfo: '.TBinding'
+          }]
+      }, {
+        localName: 'TBusinessContextElement',
+        typeName: 'tBusinessContextElement',
+        baseTypeInfo: '.TNamedElement',
+        propertyInfos: [{
+            name: 'otherAttributes',
+            type: 'anyAttribute'
           }, {
-            name: 'name',
+            name: 'uri',
             attributeName: {
-              localPart: 'name'
-            },
-            type: 'attribute'
-          }, {
-            name: 'typeRef',
-            attributeName: {
-              localPart: 'typeRef'
+              localPart: 'URI'
             },
             type: 'attribute'
           }]
@@ -779,109 +794,86 @@ var DMN12_Module_Factory = function () {
             type: 'attribute'
           }]
       }, {
-        localName: 'TDecisionRule',
-        typeName: 'tDecisionRule',
+        localName: 'TInformationItem',
+        typeName: 'tInformationItem',
+        baseTypeInfo: '.TNamedElement',
+        propertyInfos: [{
+            name: 'otherAttributes',
+            type: 'anyAttribute'
+          }, {
+            name: 'typeRef',
+            attributeName: {
+              localPart: 'typeRef'
+            },
+            type: 'attribute'
+          }]
+      }, {
+        localName: 'TKnowledgeSource',
+        typeName: 'tKnowledgeSource',
+        baseTypeInfo: '.TDRGElement',
+        propertyInfos: [{
+            name: 'otherAttributes',
+            type: 'anyAttribute'
+          }, {
+            name: 'authorityRequirement',
+            minOccurs: 0,
+            collection: true,
+            typeInfo: '.TAuthorityRequirement'
+          }, {
+            name: 'type'
+          }, {
+            name: 'owner',
+            typeInfo: '.TDMNElementReference'
+          }, {
+            name: 'locationURI',
+            attributeName: {
+              localPart: 'locationURI'
+            },
+            type: 'attribute'
+          }]
+      }, {
+        localName: 'TNamedElement',
+        typeName: 'tNamedElement',
         baseTypeInfo: '.TDMNElement',
         propertyInfos: [{
             name: 'otherAttributes',
             type: 'anyAttribute'
           }, {
-            name: 'inputEntry',
-            minOccurs: 0,
-            collection: true,
-            typeInfo: '.TUnaryTests'
-          }, {
-            name: 'outputEntry',
+            name: 'name',
             required: true,
-            collection: true,
-            typeInfo: '.TLiteralExpression'
-          }, {
-            name: 'annotationEntry',
-            minOccurs: 0,
-            collection: true,
-            typeInfo: '.TRuleAnnotation'
+            attributeName: {
+              localPart: 'name'
+            },
+            type: 'attribute'
           }]
       }, {
-        localName: 'TDecisionTable',
-        typeName: 'tDecisionTable',
-        baseTypeInfo: '.TExpression',
+        localName: 'TImport',
+        typeName: 'tImport',
+        baseTypeInfo: '.TNamedElement',
         propertyInfos: [{
             name: 'otherAttributes',
             type: 'anyAttribute'
           }, {
-            name: 'input',
-            minOccurs: 0,
-            collection: true,
-            typeInfo: '.TInputClause'
-          }, {
-            name: 'output',
+            name: 'namespace',
             required: true,
-            collection: true,
-            typeInfo: '.TOutputClause'
-          }, {
-            name: 'annotation',
-            minOccurs: 0,
-            collection: true,
-            typeInfo: '.TRuleAnnotationClause'
-          }, {
-            name: 'rule',
-            minOccurs: 0,
-            collection: true,
-            typeInfo: '.TDecisionRule'
-          }, {
-            name: 'hitPolicy',
-            typeInfo: '.THitPolicy',
             attributeName: {
-              localPart: 'hitPolicy'
+              localPart: 'namespace'
             },
             type: 'attribute'
           }, {
-            name: 'aggregation',
-            typeInfo: '.TBuiltinAggregator',
+            name: 'locationURI',
             attributeName: {
-              localPart: 'aggregation'
+              localPart: 'locationURI'
             },
             type: 'attribute'
           }, {
-            name: 'preferredOrientation',
-            typeInfo: '.TDecisionTableOrientation',
+            name: 'importType',
+            required: true,
             attributeName: {
-              localPart: 'preferredOrientation'
-            },
-            type: 'attribute'
-          }, {
-            name: 'outputLabel',
-            attributeName: {
-              localPart: 'outputLabel'
+              localPart: 'importType'
             },
             type: 'attribute'
           }]
-      }, {
-        localName: 'TContextEntry',
-        typeName: 'tContextEntry',
-        baseTypeInfo: '.TDMNElement',
-        propertyInfos: [{
-            name: 'otherAttributes',
-            type: 'anyAttribute'
-          }, {
-            name: 'variable',
-            typeInfo: '.TInformationItem'
-          }, {
-            name: 'expression',
-            required: true,
-            mixed: false,
-            allowDom: false,
-            typeInfo: '.TExpression',
-            type: 'elementRef'
-          }]
-      }, {
-        type: 'enumInfo',
-        localName: 'TFunctionKind',
-        values: ['FEEL', 'Java', 'PMML']
-      }, {
-        type: 'enumInfo',
-        localName: 'TAssociationDirection',
-        values: ['None', 'One', 'Both']
       }, {
         type: 'enumInfo',
         localName: 'TBuiltinAggregator',
@@ -892,99 +884,21 @@ var DMN12_Module_Factory = function () {
         values: ['Rule-as-Row', 'Rule-as-Column', 'CrossTable']
       }, {
         type: 'enumInfo',
+        localName: 'TFunctionKind',
+        values: ['FEEL', 'Java', 'PMML']
+      }, {
+        type: 'enumInfo',
         localName: 'THitPolicy',
         values: ['UNIQUE', 'FIRST', 'PRIORITY', 'ANY', 'COLLECT', 'RULE ORDER', 'OUTPUT ORDER']
+      }, {
+        type: 'enumInfo',
+        localName: 'TAssociationDirection',
+        values: ['None', 'One', 'Both']
       }],
     elementInfos: [{
-        typeInfo: '.TTextAnnotation',
-        elementName: 'textAnnotation',
-        substitutionHead: 'artifact'
-      }, {
-        typeInfo: '.TInformationItem',
-        elementName: 'informationItem',
-        substitutionHead: 'namedElement'
-      }, {
-        typeInfo: '.TContext',
-        elementName: 'context',
-        substitutionHead: 'expression'
-      }, {
-        typeInfo: '.TInputData',
-        elementName: 'inputData',
-        substitutionHead: 'drgElement'
-      }, {
-        typeInfo: '.TDecisionService',
-        elementName: 'decisionService',
-        substitutionHead: 'invocable'
-      }, {
-        typeInfo: '.TAssociation',
-        elementName: 'association',
-        substitutionHead: 'artifact'
-      }, {
-        typeInfo: '.TExpression',
-        elementName: 'expression'
-      }, {
-        typeInfo: '.TContextEntry',
-        elementName: 'contextEntry',
-        substitutionHead: 'DMNElement'
-      }, {
-        typeInfo: '.TArtifact',
-        elementName: 'artifact',
-        substitutionHead: 'DMNElement'
-      }, {
-        typeInfo: '.TList',
-        elementName: 'list',
-        substitutionHead: 'expression'
-      }, {
-        typeInfo: '.TOrganizationUnit',
-        elementName: 'organizationUnit',
-        substitutionHead: 'businessContextElement'
-      }, {
-        typeInfo: '.TKnowledgeRequirement',
-        elementName: 'knowledgeRequirement',
-        substitutionHead: 'DMNElement'
-      }, {
         typeInfo: '.TFunctionDefinition',
         elementName: 'functionDefinition',
         substitutionHead: 'expression'
-      }, {
-        typeInfo: '.TDMNElement',
-        elementName: 'DMNElement'
-      }, {
-        typeInfo: '.TKnowledgeSource',
-        elementName: 'knowledgeSource',
-        substitutionHead: 'drgElement'
-      }, {
-        typeInfo: '.TNamedElement',
-        elementName: 'namedElement',
-        substitutionHead: 'DMNElement'
-      }, {
-        typeInfo: '.TInvocation',
-        elementName: 'invocation',
-        substitutionHead: 'expression'
-      }, {
-        typeInfo: '.TElementCollection',
-        elementName: 'elementCollection',
-        substitutionHead: 'namedElement'
-      }, {
-        typeInfo: '.TAuthorityRequirement',
-        elementName: 'authorityRequirement',
-        substitutionHead: 'DMNElement'
-      }, {
-        typeInfo: '.TRelation',
-        elementName: 'relation',
-        substitutionHead: 'expression'
-      }, {
-        typeInfo: '.TLiteralExpression',
-        elementName: 'literalExpression',
-        substitutionHead: 'expression'
-      }, {
-        typeInfo: '.TDecisionTable',
-        elementName: 'decisionTable',
-        substitutionHead: 'expression'
-      }, {
-        typeInfo: '.TPerformanceIndicator',
-        elementName: 'performanceIndicator',
-        substitutionHead: 'businessContextElement'
       }, {
         typeInfo: '.TDRGElement',
         elementName: 'drgElement',
@@ -994,32 +908,118 @@ var DMN12_Module_Factory = function () {
         elementName: 'decision',
         substitutionHead: 'drgElement'
       }, {
-        typeInfo: '.TBusinessKnowledgeModel',
-        elementName: 'businessKnowledgeModel',
-        substitutionHead: 'invocable'
+        typeInfo: '.TDMNElement',
+        elementName: 'DMNElement'
       }, {
-        typeInfo: '.TBusinessContextElement',
-        elementName: 'businessContextElement'
+        typeInfo: '.TKnowledgeRequirement',
+        elementName: 'knowledgeRequirement',
+        substitutionHead: 'DMNElement'
       }, {
-        typeInfo: '.TImport',
-        elementName: 'import',
-        substitutionHead: 'namedElement'
-      }, {
-        typeInfo: '.TItemDefinition',
-        elementName: 'itemDefinition',
-        substitutionHead: 'namedElement'
-      }, {
-        typeInfo: '.TInvocable',
-        elementName: 'invocable',
-        substitutionHead: 'drgElement'
+        typeInfo: '.TList',
+        elementName: 'list',
+        substitutionHead: 'expression'
       }, {
         typeInfo: '.TDefinitions',
         elementName: 'definitions',
         substitutionHead: 'namedElement'
       }, {
+        typeInfo: '.TBusinessKnowledgeModel',
+        elementName: 'businessKnowledgeModel',
+        substitutionHead: 'invocable'
+      }, {
+        typeInfo: '.TAuthorityRequirement',
+        elementName: 'authorityRequirement',
+        substitutionHead: 'DMNElement'
+      }, {
+        typeInfo: '.TInputData',
+        elementName: 'inputData',
+        substitutionHead: 'drgElement'
+      }, {
+        typeInfo: '.TArtifact',
+        elementName: 'artifact',
+        substitutionHead: 'DMNElement'
+      }, {
+        typeInfo: '.TPerformanceIndicator',
+        elementName: 'performanceIndicator',
+        substitutionHead: 'businessContextElement'
+      }, {
+        typeInfo: '.TElementCollection',
+        elementName: 'elementCollection',
+        substitutionHead: 'namedElement'
+      }, {
+        typeInfo: '.TInformationItem',
+        elementName: 'informationItem',
+        substitutionHead: 'namedElement'
+      }, {
+        typeInfo: '.TInvocation',
+        elementName: 'invocation',
+        substitutionHead: 'expression'
+      }, {
+        typeInfo: '.TImport',
+        elementName: 'import',
+        substitutionHead: 'namedElement'
+      }, {
+        typeInfo: '.TContextEntry',
+        elementName: 'contextEntry',
+        substitutionHead: 'DMNElement'
+      }, {
+        typeInfo: '.TOrganizationUnit',
+        elementName: 'organizationUnit',
+        substitutionHead: 'businessContextElement'
+      }, {
         typeInfo: '.TInformationRequirement',
         elementName: 'informationRequirement',
         substitutionHead: 'DMNElement'
+      }, {
+        typeInfo: '.TKnowledgeSource',
+        elementName: 'knowledgeSource',
+        substitutionHead: 'drgElement'
+      }, {
+        typeInfo: '.TDecisionService',
+        elementName: 'decisionService',
+        substitutionHead: 'invocable'
+      }, {
+        typeInfo: '.TRelation',
+        elementName: 'relation',
+        substitutionHead: 'expression'
+      }, {
+        typeInfo: '.TExpression',
+        elementName: 'expression'
+      }, {
+        typeInfo: '.TInvocable',
+        elementName: 'invocable',
+        substitutionHead: 'drgElement'
+      }, {
+        typeInfo: '.TContext',
+        elementName: 'context',
+        substitutionHead: 'expression'
+      }, {
+        typeInfo: '.TAssociation',
+        elementName: 'association',
+        substitutionHead: 'artifact'
+      }, {
+        typeInfo: '.TTextAnnotation',
+        elementName: 'textAnnotation',
+        substitutionHead: 'artifact'
+      }, {
+        typeInfo: '.TBusinessContextElement',
+        elementName: 'businessContextElement'
+      }, {
+        typeInfo: '.TNamedElement',
+        elementName: 'namedElement',
+        substitutionHead: 'DMNElement'
+      }, {
+        typeInfo: '.TDecisionTable',
+        elementName: 'decisionTable',
+        substitutionHead: 'expression'
+      }, {
+        typeInfo: '.TItemDefinition',
+        elementName: 'itemDefinition',
+        substitutionHead: 'namedElement'
+      }, {
+        typeInfo: '.TLiteralExpression',
+        elementName: 'literalExpression',
+        substitutionHead: 'expression'
       }]
   };
   return {
