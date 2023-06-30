@@ -3,21 +3,48 @@ var DC_Module_Factory = function () {
     name: 'DC',
     defaultElementNamespaceURI: 'http:\/\/www.omg.org\/spec\/DMN\/20180521\/DC\/',
     typeInfos: [{
-        localName: 'Dimension',
+        localName: 'Color',
         propertyInfos: [{
-            name: 'width',
+            name: 'red',
             required: true,
-            typeInfo: 'Double',
+            typeInfo: 'Int',
             attributeName: {
-              localPart: 'width'
+              localPart: 'red'
             },
             type: 'attribute'
           }, {
-            name: 'height',
+            name: 'green',
+            required: true,
+            typeInfo: 'Int',
+            attributeName: {
+              localPart: 'green'
+            },
+            type: 'attribute'
+          }, {
+            name: 'blue',
+            required: true,
+            typeInfo: 'Int',
+            attributeName: {
+              localPart: 'blue'
+            },
+            type: 'attribute'
+          }]
+      }, {
+        localName: 'Point',
+        propertyInfos: [{
+            name: 'x',
             required: true,
             typeInfo: 'Double',
             attributeName: {
-              localPart: 'height'
+              localPart: 'x'
+            },
+            type: 'attribute'
+          }, {
+            name: 'y',
+            required: true,
+            typeInfo: 'Double',
+            attributeName: {
+              localPart: 'y'
             },
             type: 'attribute'
           }]
@@ -57,59 +84,32 @@ var DC_Module_Factory = function () {
             type: 'attribute'
           }]
       }, {
-        localName: 'Point',
+        localName: 'Dimension',
         propertyInfos: [{
-            name: 'x',
+            name: 'width',
             required: true,
             typeInfo: 'Double',
             attributeName: {
-              localPart: 'x'
+              localPart: 'width'
             },
             type: 'attribute'
           }, {
-            name: 'y',
+            name: 'height',
             required: true,
             typeInfo: 'Double',
             attributeName: {
-              localPart: 'y'
+              localPart: 'height'
             },
             type: 'attribute'
           }]
-      }, {
-        localName: 'Color',
-        propertyInfos: [{
-            name: 'red',
-            required: true,
-            typeInfo: 'Int',
-            attributeName: {
-              localPart: 'red'
-            },
-            type: 'attribute'
-          }, {
-            name: 'green',
-            required: true,
-            typeInfo: 'Int',
-            attributeName: {
-              localPart: 'green'
-            },
-            type: 'attribute'
-          }, {
-            name: 'blue',
-            required: true,
-            typeInfo: 'Int',
-            attributeName: {
-              localPart: 'blue'
-            },
-            type: 'attribute'
-          }]
-      }, {
-        type: 'enumInfo',
-        localName: 'AlignmentKind',
-        values: ['start', 'end', 'center']
       }, {
         type: 'enumInfo',
         localName: 'KnownColor',
         values: ['maroon', 'red', 'orange', 'yellow', 'olive', 'purple', 'fuchsia', 'white', 'lime', 'green', 'navy', 'blue', 'aqua', 'teal', 'black', 'silver', 'gray']
+      }, {
+        type: 'enumInfo',
+        localName: 'AlignmentKind',
+        values: ['start', 'end', 'center']
       }],
     elementInfos: [{
         typeInfo: '.Bounds',
