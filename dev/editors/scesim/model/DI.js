@@ -14,28 +14,18 @@ var DI_Module_Factory = function () {
             type: 'anyElement'
           }]
       }, {
-        localName: 'Diagram',
-        baseTypeInfo: '.DiagramElement',
+        localName: 'Style',
         propertyInfos: [{
             name: 'otherAttributes',
             type: 'anyAttribute'
           }, {
-            name: 'name',
-            attributeName: {
-              localPart: 'name'
-            },
-            type: 'attribute'
+            name: 'extension',
+            typeInfo: '.Style.Extension'
           }, {
-            name: 'documentation',
+            name: 'id',
+            typeInfo: 'ID',
             attributeName: {
-              localPart: 'documentation'
-            },
-            type: 'attribute'
-          }, {
-            name: 'resolution',
-            typeInfo: 'Double',
-            attributeName: {
-              localPart: 'resolution'
+              localPart: 'id'
             },
             type: 'attribute'
           }]
@@ -76,18 +66,28 @@ var DI_Module_Factory = function () {
             typeInfo: 'DC.Point'
           }]
       }, {
-        localName: 'Style',
+        localName: 'Diagram',
+        baseTypeInfo: '.DiagramElement',
         propertyInfos: [{
             name: 'otherAttributes',
             type: 'anyAttribute'
           }, {
-            name: 'extension',
-            typeInfo: '.Style.Extension'
-          }, {
-            name: 'id',
-            typeInfo: 'ID',
+            name: 'name',
             attributeName: {
-              localPart: 'id'
+              localPart: 'name'
+            },
+            type: 'attribute'
+          }, {
+            name: 'documentation',
+            attributeName: {
+              localPart: 'documentation'
+            },
+            type: 'attribute'
+          }, {
+            name: 'resolution',
+            typeInfo: 'Double',
+            attributeName: {
+              localPart: 'resolution'
             },
             type: 'attribute'
           }]
