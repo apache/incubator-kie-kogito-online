@@ -1,1 +1,1 @@
-./standalone/0.31.0/swf/index.js
+../0.31.0/swf/index.js
