@@ -1,0 +1,1 @@
+/swf/index.js
