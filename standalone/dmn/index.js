@@ -1,1 +1,1 @@
-/dmn/index.js
+.standalone/0.31.0/dmn/index.js
