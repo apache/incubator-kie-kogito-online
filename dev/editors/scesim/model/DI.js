@@ -4,13 +4,27 @@ var DI_Module_Factory = function () {
     defaultElementNamespaceURI: 'http:\/\/www.omg.org\/spec\/DMN\/20180521\/DI\/',
     dependencies: ['DC'],
     typeInfos: [{
-        localName: 'Style',
+        localName: 'DiagramElement',
         propertyInfos: [{
             name: 'otherAttributes',
             type: 'anyAttribute'
           }, {
             name: 'extension',
-            typeInfo: '.Style.Extension'
+            typeInfo: '.DiagramElement.Extension'
+          }, {
+            name: 'style',
+            mixed: false,
+            allowDom: false,
+            elementName: 'Style',
+            typeInfo: '.Style',
+            type: 'elementRef'
+          }, {
+            name: 'sharedStyle',
+            typeInfo: 'IDREF',
+            attributeName: {
+              localPart: 'sharedStyle'
+            },
+            type: 'attribute'
           }, {
             name: 'id',
             typeInfo: 'ID',
@@ -18,44 +32,6 @@ var DI_Module_Factory = function () {
               localPart: 'id'
             },
             type: 'attribute'
-          }]
-      }, {
-        localName: 'Diagram',
-        baseTypeInfo: '.DiagramElement',
-        propertyInfos: [{
-            name: 'otherAttributes',
-            type: 'anyAttribute'
-          }, {
-            name: 'name',
-            attributeName: {
-              localPart: 'name'
-            },
-            type: 'attribute'
-          }, {
-            name: 'documentation',
-            attributeName: {
-              localPart: 'documentation'
-            },
-            type: 'attribute'
-          }, {
-            name: 'resolution',
-            typeInfo: 'Double',
-            attributeName: {
-              localPart: 'resolution'
-            },
-            type: 'attribute'
-          }]
-      }, {
-        localName: 'Edge',
-        baseTypeInfo: '.DiagramElement',
-        propertyInfos: [{
-            name: 'otherAttributes',
-            type: 'anyAttribute'
-          }, {
-            name: 'waypoint',
-            minOccurs: 0,
-            collection: true,
-            typeInfo: 'DC.Point'
           }]
       }, {
         localName: 'DiagramElement.Extension',
@@ -92,32 +68,56 @@ var DI_Module_Factory = function () {
             typeInfo: 'DC.Bounds'
           }]
       }, {
-        localName: 'DiagramElement',
+        localName: 'Style',
         propertyInfos: [{
             name: 'otherAttributes',
             type: 'anyAttribute'
           }, {
             name: 'extension',
-            typeInfo: '.DiagramElement.Extension'
-          }, {
-            name: 'style',
-            mixed: false,
-            allowDom: false,
-            elementName: 'Style',
-            typeInfo: '.Style',
-            type: 'elementRef'
-          }, {
-            name: 'sharedStyle',
-            typeInfo: 'IDREF',
-            attributeName: {
-              localPart: 'sharedStyle'
-            },
-            type: 'attribute'
+            typeInfo: '.Style.Extension'
           }, {
             name: 'id',
             typeInfo: 'ID',
             attributeName: {
               localPart: 'id'
+            },
+            type: 'attribute'
+          }]
+      }, {
+        localName: 'Edge',
+        baseTypeInfo: '.DiagramElement',
+        propertyInfos: [{
+            name: 'otherAttributes',
+            type: 'anyAttribute'
+          }, {
+            name: 'waypoint',
+            minOccurs: 0,
+            collection: true,
+            typeInfo: 'DC.Point'
+          }]
+      }, {
+        localName: 'Diagram',
+        baseTypeInfo: '.DiagramElement',
+        propertyInfos: [{
+            name: 'otherAttributes',
+            type: 'anyAttribute'
+          }, {
+            name: 'name',
+            attributeName: {
+              localPart: 'name'
+            },
+            type: 'attribute'
+          }, {
+            name: 'documentation',
+            attributeName: {
+              localPart: 'documentation'
+            },
+            type: 'attribute'
+          }, {
+            name: 'resolution',
+            typeInfo: 'Double',
+            attributeName: {
+              localPart: 'resolution'
             },
             type: 'attribute'
           }]
