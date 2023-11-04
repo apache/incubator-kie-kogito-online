@@ -4,7 +4,7 @@ var DI_Module_Factory = function () {
     defaultElementNamespaceURI: 'http:\/\/www.omg.org\/spec\/DMN\/20180521\/DI\/',
     dependencies: ['DC'],
     typeInfos: [{
-        localName: 'Style.Extension',
+        localName: 'DiagramElement.Extension',
         typeName: null,
         propertyInfos: [{
             name: 'any',
@@ -60,6 +60,16 @@ var DI_Module_Factory = function () {
             type: 'attribute'
           }]
       }, {
+        localName: 'Style.Extension',
+        typeName: null,
+        propertyInfos: [{
+            name: 'any',
+            minOccurs: 0,
+            collection: true,
+            mixed: false,
+            type: 'anyElement'
+          }]
+      }, {
         localName: 'Diagram',
         baseTypeInfo: '.DiagramElement',
         propertyInfos: [{
@@ -84,16 +94,6 @@ var DI_Module_Factory = function () {
               localPart: 'resolution'
             },
             type: 'attribute'
-          }]
-      }, {
-        localName: 'DiagramElement.Extension',
-        typeName: null,
-        propertyInfos: [{
-            name: 'any',
-            minOccurs: 0,
-            collection: true,
-            mixed: false,
-            type: 'anyElement'
           }]
       }, {
         localName: 'Shape',
