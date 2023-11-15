@@ -3,3 +3,45 @@ Copyright 2023 The Apache Software Foundation
 
 This product includes software developed at
 The Apache Software Foundation (http://www.apache.org/).
+
+The Initial Developer of some parts of the framework, which are copied from, derived from, or
+inspired by KIE (Knowledge Is Everthing) group, is Red Hat, Inc (https://www.redhat.com/).
+Copyright Red Hat, Inc. and/or its affiliates.. All Rights Reserved.
+
+This product also includes the following third-party components:
+
+* animate.css (http://daneden.me/animate)
+
+   Copyright (c) 2016 Daniel Eden
+
+* bootstrap (https://getbootstrap.com/)
+
+   Copyright 2011-2019 Twitter, Inc.
+
+* bootstrap-datepicker (https://github.com/smalot/bootstrap-datetimepicker)
+
+   Copyright 2012 Stefan Petre
+
+* bootstrap-select (http://silviomoreto.github.io/bootstrap-select)
+
+   Copyright 2013-2017 bootstrap-select
+
+* Bootstrap TouchSpin  (http://www.virtuosoft.eu/code/bootstrap-touchspin/)
+
+   Copyright (c) István Ujj-Mészáros.
+
+* Daterangepicker (https://www.daterangepicker.com/)
+
+   Copyright (c) 2012-2017 Dan Grossman. All rights reserved.
+
+* Font Awesome (https://fontawesome.com/)
+
+   Copyright Dave Gandy 2016. All rights reserved
+
+* Google Web Toolkit (GWT) (https://www.gwtproject.org/)
+
+   Copyright 2007 Google Inc.
+
+* jQuery UI (http://jqueryui.com)
+
+   Copyright jQuery Foundation
