@@ -14,6 +14,36 @@ var DI_Module_Factory = function () {
             type: 'anyElement'
           }]
       }, {
+        localName: 'DiagramElement',
+        propertyInfos: [{
+            name: 'otherAttributes',
+            type: 'anyAttribute'
+          }, {
+            name: 'extension',
+            typeInfo: '.DiagramElement.Extension'
+          }, {
+            name: 'style',
+            mixed: false,
+            allowDom: false,
+            elementName: 'Style',
+            typeInfo: '.Style',
+            type: 'elementRef'
+          }, {
+            name: 'sharedStyle',
+            typeInfo: 'IDREF',
+            attributeName: {
+              localPart: 'sharedStyle'
+            },
+            type: 'attribute'
+          }, {
+            name: 'id',
+            typeInfo: 'ID',
+            attributeName: {
+              localPart: 'id'
+            },
+            type: 'attribute'
+          }]
+      }, {
         localName: 'Shape',
         baseTypeInfo: '.DiagramElement',
         propertyInfos: [{
@@ -42,6 +72,18 @@ var DI_Module_Factory = function () {
               localPart: 'id'
             },
             type: 'attribute'
+          }]
+      }, {
+        localName: 'Edge',
+        baseTypeInfo: '.DiagramElement',
+        propertyInfos: [{
+            name: 'otherAttributes',
+            type: 'anyAttribute'
+          }, {
+            name: 'waypoint',
+            minOccurs: 0,
+            collection: true,
+            typeInfo: 'DC.Point'
           }]
       }, {
         localName: 'DiagramElement.Extension',
@@ -76,48 +118,6 @@ var DI_Module_Factory = function () {
             typeInfo: 'Double',
             attributeName: {
               localPart: 'resolution'
-            },
-            type: 'attribute'
-          }]
-      }, {
-        localName: 'Edge',
-        baseTypeInfo: '.DiagramElement',
-        propertyInfos: [{
-            name: 'otherAttributes',
-            type: 'anyAttribute'
-          }, {
-            name: 'waypoint',
-            minOccurs: 0,
-            collection: true,
-            typeInfo: 'DC.Point'
-          }]
-      }, {
-        localName: 'DiagramElement',
-        propertyInfos: [{
-            name: 'otherAttributes',
-            type: 'anyAttribute'
-          }, {
-            name: 'extension',
-            typeInfo: '.DiagramElement.Extension'
-          }, {
-            name: 'style',
-            mixed: false,
-            allowDom: false,
-            elementName: 'Style',
-            typeInfo: '.Style',
-            type: 'elementRef'
-          }, {
-            name: 'sharedStyle',
-            typeInfo: 'IDREF',
-            attributeName: {
-              localPart: 'sharedStyle'
-            },
-            type: 'attribute'
-          }, {
-            name: 'id',
-            typeInfo: 'ID',
-            attributeName: {
-              localPart: 'id'
             },
             type: 'attribute'
           }]
