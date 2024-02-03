@@ -19,6 +19,16 @@ var KIE_Module_Factory = function () {
             type: 'attribute'
           }]
       }, {
+        localName: 'TComponentsWidthsExtension',
+        typeName: 'tComponentsWidthsExtension',
+        propertyInfos: [{
+            name: 'componentWidths',
+            minOccurs: 0,
+            collection: true,
+            elementName: 'ComponentWidths',
+            typeInfo: '.TComponentWidths'
+          }]
+      }, {
         localName: 'TComponentWidths',
         typeName: 'tComponentWidths',
         propertyInfos: [{
@@ -33,26 +43,16 @@ var KIE_Module_Factory = function () {
             },
             type: 'attribute'
           }]
-      }, {
-        localName: 'TComponentsWidthsExtension',
-        typeName: 'tComponentsWidthsExtension',
-        propertyInfos: [{
-            name: 'componentWidths',
-            minOccurs: 0,
-            collection: true,
-            elementName: 'ComponentWidths',
-            typeInfo: '.TComponentWidths'
-          }]
       }],
     elementInfos: [{
-        typeInfo: '.TAttachment',
-        elementName: 'attachment'
+        typeInfo: '.TComponentWidths',
+        elementName: 'ComponentWidths'
       }, {
         typeInfo: '.TComponentsWidthsExtension',
         elementName: 'ComponentsWidthsExtension'
       }, {
-        typeInfo: '.TComponentWidths',
-        elementName: 'ComponentWidths'
+        typeInfo: '.TAttachment',
+        elementName: 'attachment'
       }]
   };
   return {
