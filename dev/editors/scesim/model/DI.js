@@ -4,6 +4,16 @@ var DI_Module_Factory = function () {
     defaultElementNamespaceURI: 'http:\/\/www.omg.org\/spec\/DMN\/20180521\/DI\/',
     dependencies: ['DC'],
     typeInfos: [{
+        localName: 'Style.Extension',
+        typeName: null,
+        propertyInfos: [{
+            name: 'any',
+            minOccurs: 0,
+            collection: true,
+            mixed: false,
+            type: 'anyElement'
+          }]
+      }, {
         localName: 'Shape',
         baseTypeInfo: '.DiagramElement',
         propertyInfos: [{
@@ -18,48 +28,32 @@ var DI_Module_Factory = function () {
             typeInfo: 'DC.Bounds'
           }]
       }, {
-        localName: 'Style.Extension',
-        typeName: null,
-        propertyInfos: [{
-            name: 'any',
-            minOccurs: 0,
-            collection: true,
-            mixed: false,
-            type: 'anyElement'
-          }]
-      }, {
-        localName: 'DiagramElement.Extension',
-        typeName: null,
-        propertyInfos: [{
-            name: 'any',
-            minOccurs: 0,
-            collection: true,
-            mixed: false,
-            type: 'anyElement'
-          }]
-      }, {
-        localName: 'Diagram',
-        baseTypeInfo: '.DiagramElement',
+        localName: 'DiagramElement',
         propertyInfos: [{
             name: 'otherAttributes',
             type: 'anyAttribute'
           }, {
-            name: 'name',
+            name: 'extension',
+            typeInfo: '.DiagramElement.Extension'
+          }, {
+            name: 'style',
+            mixed: false,
+            allowDom: false,
+            elementName: 'Style',
+            typeInfo: '.Style',
+            type: 'elementRef'
+          }, {
+            name: 'sharedStyle',
+            typeInfo: 'IDREF',
             attributeName: {
-              localPart: 'name'
+              localPart: 'sharedStyle'
             },
             type: 'attribute'
           }, {
-            name: 'documentation',
+            name: 'id',
+            typeInfo: 'ID',
             attributeName: {
-              localPart: 'documentation'
-            },
-            type: 'attribute'
-          }, {
-            name: 'resolution',
-            typeInfo: 'Double',
-            attributeName: {
-              localPart: 'resolution'
+              localPart: 'id'
             },
             type: 'attribute'
           }]
@@ -92,34 +86,40 @@ var DI_Module_Factory = function () {
             type: 'attribute'
           }]
       }, {
-        localName: 'DiagramElement',
+        localName: 'Diagram',
+        baseTypeInfo: '.DiagramElement',
         propertyInfos: [{
             name: 'otherAttributes',
             type: 'anyAttribute'
           }, {
-            name: 'extension',
-            typeInfo: '.DiagramElement.Extension'
+            name: 'name',
+            attributeName: {
+              localPart: 'name'
+            },
+            type: 'attribute'
           }, {
-            name: 'style',
+            name: 'documentation',
+            attributeName: {
+              localPart: 'documentation'
+            },
+            type: 'attribute'
+          }, {
+            name: 'resolution',
+            typeInfo: 'Double',
+            attributeName: {
+              localPart: 'resolution'
+            },
+            type: 'attribute'
+          }]
+      }, {
+        localName: 'DiagramElement.Extension',
+        typeName: null,
+        propertyInfos: [{
+            name: 'any',
+            minOccurs: 0,
+            collection: true,
             mixed: false,
-            allowDom: false,
-            elementName: 'Style',
-            typeInfo: '.Style',
-            type: 'elementRef'
-          }, {
-            name: 'sharedStyle',
-            typeInfo: 'IDREF',
-            attributeName: {
-              localPart: 'sharedStyle'
-            },
-            type: 'attribute'
-          }, {
-            name: 'id',
-            typeInfo: 'ID',
-            attributeName: {
-              localPart: 'id'
-            },
-            type: 'attribute'
+            type: 'anyElement'
           }]
       }],
     elementInfos: [{
