@@ -1,1 +1,1 @@
-../0.32.0/swf/index.js
+../10.0.0/swf/index.js

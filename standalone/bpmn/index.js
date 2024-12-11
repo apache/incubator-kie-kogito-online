@@ -1,1 +1,1 @@
-../0.32.0/bpmn/index.js
+../10.0.0/bpmn/index.js
