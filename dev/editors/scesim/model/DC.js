@@ -112,6 +112,9 @@ var DC_Module_Factory = function () {
         values: ['start', 'end', 'center']
       }],
     elementInfos: [{
+        typeInfo: '.Color',
+        elementName: 'Color'
+      }, {
         typeInfo: '.Dimension',
         elementName: 'Dimension'
       }, {
@@ -120,9 +123,6 @@ var DC_Module_Factory = function () {
       }, {
         typeInfo: '.Bounds',
         elementName: 'Bounds'
-      }, {
-        typeInfo: '.Color',
-        elementName: 'Color'
       }]
   };
   return {
