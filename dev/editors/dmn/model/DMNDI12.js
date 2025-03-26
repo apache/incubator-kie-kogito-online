@@ -23,13 +23,6 @@ var DMNDI12_Module_Factory = function () {
             type: 'attribute'
           }]
       }, {
-        localName: 'DMNDecisionServiceDividerLine',
-        baseTypeInfo: 'DI.Edge',
-        propertyInfos: [{
-            name: 'otherAttributes',
-            type: 'anyAttribute'
-          }]
-      }, {
         localName: 'DMNStyle',
         baseTypeInfo: 'DI.Style',
         propertyInfos: [{
@@ -104,6 +97,23 @@ var DMNDI12_Module_Factory = function () {
             type: 'attribute'
           }]
       }, {
+        localName: 'DMNDecisionServiceDividerLine',
+        baseTypeInfo: 'DI.Edge',
+        propertyInfos: [{
+            name: 'otherAttributes',
+            type: 'anyAttribute'
+          }]
+      }, {
+        localName: 'DMNLabel',
+        baseTypeInfo: 'DI.Shape',
+        propertyInfos: [{
+            name: 'otherAttributes',
+            type: 'anyAttribute'
+          }, {
+            name: 'text',
+            elementName: 'Text'
+          }]
+      }, {
         localName: 'DMNDiagram',
         baseTypeInfo: 'DI.Diagram',
         propertyInfos: [{
@@ -175,28 +185,8 @@ var DMNDI12_Module_Factory = function () {
             },
             type: 'attribute'
           }]
-      }, {
-        localName: 'DMNLabel',
-        baseTypeInfo: 'DI.Shape',
-        propertyInfos: [{
-            name: 'otherAttributes',
-            type: 'anyAttribute'
-          }, {
-            name: 'text',
-            elementName: 'Text'
-          }]
       }],
     elementInfos: [{
-        typeInfo: '.DMNStyle',
-        elementName: 'DMNStyle',
-        substitutionHead: {
-          localPart: 'Style',
-          namespaceURI: 'http:\/\/www.omg.org\/spec\/DMN\/20180521\/DI\/'
-        }
-      }, {
-        typeInfo: '.DMNLabel',
-        elementName: 'DMNLabel'
-      }, {
         typeInfo: '.DMNEdge',
         elementName: 'DMNEdge',
         substitutionHead: 'DMNDiagramElement'
@@ -204,18 +194,28 @@ var DMNDI12_Module_Factory = function () {
         typeInfo: 'DI.DiagramElement',
         elementName: 'DMNDiagramElement'
       }, {
-        typeInfo: '.DMNDecisionServiceDividerLine',
-        elementName: 'DMNDecisionServiceDividerLine'
-      }, {
-        typeInfo: '.DMNDI',
-        elementName: 'DMNDI'
-      }, {
         typeInfo: '.DMNShape',
         elementName: 'DMNShape',
         substitutionHead: 'DMNDiagramElement'
       }, {
         typeInfo: '.DMNDiagram',
         elementName: 'DMNDiagram'
+      }, {
+        typeInfo: '.DMNLabel',
+        elementName: 'DMNLabel'
+      }, {
+        typeInfo: '.DMNDecisionServiceDividerLine',
+        elementName: 'DMNDecisionServiceDividerLine'
+      }, {
+        typeInfo: '.DMNStyle',
+        elementName: 'DMNStyle',
+        substitutionHead: {
+          localPart: 'Style',
+          namespaceURI: 'http:\/\/www.omg.org\/spec\/DMN\/20180521\/DI\/'
+        }
+      }, {
+        typeInfo: '.DMNDI',
+        elementName: 'DMNDI'
       }]
   };
   return {
