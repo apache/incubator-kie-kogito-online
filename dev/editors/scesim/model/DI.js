@@ -14,6 +14,20 @@ var DI_Module_Factory = function () {
             type: 'anyElement'
           }]
       }, {
+        localName: 'Shape',
+        baseTypeInfo: '.DiagramElement',
+        propertyInfos: [{
+            name: 'otherAttributes',
+            type: 'anyAttribute'
+          }, {
+            name: 'bounds',
+            elementName: {
+              localPart: 'Bounds',
+              namespaceURI: 'http:\/\/www.omg.org\/spec\/DMN\/20180521\/DC\/'
+            },
+            typeInfo: 'DC.Bounds'
+          }]
+      }, {
         localName: 'Style.Extension',
         typeName: null,
         propertyInfos: [{
@@ -52,20 +66,6 @@ var DI_Module_Factory = function () {
               localPart: 'id'
             },
             type: 'attribute'
-          }]
-      }, {
-        localName: 'Shape',
-        baseTypeInfo: '.DiagramElement',
-        propertyInfos: [{
-            name: 'otherAttributes',
-            type: 'anyAttribute'
-          }, {
-            name: 'bounds',
-            elementName: {
-              localPart: 'Bounds',
-              namespaceURI: 'http:\/\/www.omg.org\/spec\/DMN\/20180521\/DC\/'
-            },
-            typeInfo: 'DC.Bounds'
           }]
       }, {
         localName: 'Edge',
