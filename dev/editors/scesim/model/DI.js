@@ -16,6 +16,16 @@ var DI_Module_Factory = function () {
             typeInfo: 'DC.Point'
           }]
       }, {
+        localName: 'DiagramElement.Extension',
+        typeName: null,
+        propertyInfos: [{
+            name: 'any',
+            minOccurs: 0,
+            collection: true,
+            mixed: false,
+            type: 'anyElement'
+          }]
+      }, {
         localName: 'DiagramElement',
         propertyInfos: [{
             name: 'otherAttributes',
@@ -46,6 +56,16 @@ var DI_Module_Factory = function () {
             type: 'attribute'
           }]
       }, {
+        localName: 'Style.Extension',
+        typeName: null,
+        propertyInfos: [{
+            name: 'any',
+            minOccurs: 0,
+            collection: true,
+            mixed: false,
+            type: 'anyElement'
+          }]
+      }, {
         localName: 'Diagram',
         baseTypeInfo: '.DiagramElement',
         propertyInfos: [{
@@ -70,26 +90,6 @@ var DI_Module_Factory = function () {
               localPart: 'resolution'
             },
             type: 'attribute'
-          }]
-      }, {
-        localName: 'DiagramElement.Extension',
-        typeName: null,
-        propertyInfos: [{
-            name: 'any',
-            minOccurs: 0,
-            collection: true,
-            mixed: false,
-            type: 'anyElement'
-          }]
-      }, {
-        localName: 'Style.Extension',
-        typeName: null,
-        propertyInfos: [{
-            name: 'any',
-            minOccurs: 0,
-            collection: true,
-            mixed: false,
-            type: 'anyElement'
           }]
       }, {
         localName: 'Style',
