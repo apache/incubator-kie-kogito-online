@@ -3,6 +3,22 @@ var KIE_Module_Factory = function () {
     name: 'KIE',
     defaultElementNamespaceURI: 'http:\/\/www.drools.org\/kie\/dmn\/1.2',
     typeInfos: [{
+        localName: 'TAttachment',
+        typeName: 'tAttachment',
+        propertyInfos: [{
+            name: 'url',
+            attributeName: {
+              localPart: 'url'
+            },
+            type: 'attribute'
+          }, {
+            name: 'name',
+            attributeName: {
+              localPart: 'name'
+            },
+            type: 'attribute'
+          }]
+      }, {
         localName: 'TComponentWidths',
         typeName: 'tComponentWidths',
         propertyInfos: [{
@@ -26,22 +42,6 @@ var KIE_Module_Factory = function () {
             collection: true,
             elementName: 'ComponentWidths',
             typeInfo: '.TComponentWidths'
-          }]
-      }, {
-        localName: 'TAttachment',
-        typeName: 'tAttachment',
-        propertyInfos: [{
-            name: 'url',
-            attributeName: {
-              localPart: 'url'
-            },
-            type: 'attribute'
-          }, {
-            name: 'name',
-            attributeName: {
-              localPart: 'name'
-            },
-            type: 'attribute'
           }]
       }],
     elementInfos: [{
