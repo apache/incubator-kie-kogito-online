@@ -3,19 +3,14 @@ var KIE_Module_Factory = function () {
     name: 'KIE',
     defaultElementNamespaceURI: 'http:\/\/www.drools.org\/kie\/dmn\/1.2',
     typeInfos: [{
-        localName: 'TComponentWidths',
-        typeName: 'tComponentWidths',
+        localName: 'TComponentsWidthsExtension',
+        typeName: 'tComponentsWidthsExtension',
         propertyInfos: [{
-            name: 'width',
+            name: 'componentWidths',
             minOccurs: 0,
             collection: true,
-            typeInfo: 'Float'
-          }, {
-            name: 'dmnElementRef',
-            attributeName: {
-              localPart: 'dmnElementRef'
-            },
-            type: 'attribute'
+            elementName: 'ComponentWidths',
+            typeInfo: '.TComponentWidths'
           }]
       }, {
         localName: 'TAttachment',
@@ -34,14 +29,19 @@ var KIE_Module_Factory = function () {
             type: 'attribute'
           }]
       }, {
-        localName: 'TComponentsWidthsExtension',
-        typeName: 'tComponentsWidthsExtension',
+        localName: 'TComponentWidths',
+        typeName: 'tComponentWidths',
         propertyInfos: [{
-            name: 'componentWidths',
+            name: 'width',
             minOccurs: 0,
             collection: true,
-            elementName: 'ComponentWidths',
-            typeInfo: '.TComponentWidths'
+            typeInfo: 'Float'
+          }, {
+            name: 'dmnElementRef',
+            attributeName: {
+              localPart: 'dmnElementRef'
+            },
+            type: 'attribute'
           }]
       }],
     elementInfos: [{
