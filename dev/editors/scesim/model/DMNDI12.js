@@ -2,26 +2,80 @@ var DMNDI12_Module_Factory = function () {
   var DMNDI12 = {
     name: 'DMNDI12',
     defaultElementNamespaceURI: 'http:\/\/www.omg.org\/spec\/DMN\/20180521\/DMNDI\/',
-    dependencies: ['DC', 'DI'],
+    dependencies: ['DI', 'DC'],
     typeInfos: [{
-        localName: 'DMNDiagram',
-        baseTypeInfo: 'DI.Diagram',
+        localName: 'DMNStyle',
+        baseTypeInfo: 'DI.Style',
         propertyInfos: [{
             name: 'otherAttributes',
             type: 'anyAttribute'
           }, {
-            name: 'size',
-            elementName: 'Size',
-            typeInfo: 'DC.Dimension'
+            name: 'fillColor',
+            elementName: 'FillColor',
+            typeInfo: 'DC.Color'
           }, {
-            name: 'dmnDiagramElement',
-            minOccurs: 0,
-            collection: true,
-            mixed: false,
-            allowDom: false,
-            elementName: 'DMNDiagramElement',
-            typeInfo: 'DI.DiagramElement',
-            type: 'elementRef'
+            name: 'strokeColor',
+            elementName: 'StrokeColor',
+            typeInfo: 'DC.Color'
+          }, {
+            name: 'fontColor',
+            elementName: 'FontColor',
+            typeInfo: 'DC.Color'
+          }, {
+            name: 'fontFamily',
+            attributeName: {
+              localPart: 'fontFamily'
+            },
+            type: 'attribute'
+          }, {
+            name: 'fontSize',
+            typeInfo: 'Double',
+            attributeName: {
+              localPart: 'fontSize'
+            },
+            type: 'attribute'
+          }, {
+            name: 'fontItalic',
+            typeInfo: 'Boolean',
+            attributeName: {
+              localPart: 'fontItalic'
+            },
+            type: 'attribute'
+          }, {
+            name: 'fontBold',
+            typeInfo: 'Boolean',
+            attributeName: {
+              localPart: 'fontBold'
+            },
+            type: 'attribute'
+          }, {
+            name: 'fontUnderline',
+            typeInfo: 'Boolean',
+            attributeName: {
+              localPart: 'fontUnderline'
+            },
+            type: 'attribute'
+          }, {
+            name: 'fontStrikeThrough',
+            typeInfo: 'Boolean',
+            attributeName: {
+              localPart: 'fontStrikeThrough'
+            },
+            type: 'attribute'
+          }, {
+            name: 'labelHorizontalAlignement',
+            typeInfo: 'DC.AlignmentKind',
+            attributeName: {
+              localPart: 'labelHorizontalAlignement'
+            },
+            type: 'attribute'
+          }, {
+            name: 'labelVerticalAlignment',
+            typeInfo: 'DC.AlignmentKind',
+            attributeName: {
+              localPart: 'labelVerticalAlignment'
+            },
+            type: 'attribute'
           }]
       }, {
         localName: 'DMNShape',
@@ -97,6 +151,26 @@ var DMNDI12_Module_Factory = function () {
             elementName: 'Text'
           }]
       }, {
+        localName: 'DMNDiagram',
+        baseTypeInfo: 'DI.Diagram',
+        propertyInfos: [{
+            name: 'otherAttributes',
+            type: 'anyAttribute'
+          }, {
+            name: 'size',
+            elementName: 'Size',
+            typeInfo: 'DC.Dimension'
+          }, {
+            name: 'dmnDiagramElement',
+            minOccurs: 0,
+            collection: true,
+            mixed: false,
+            allowDom: false,
+            elementName: 'DMNDiagramElement',
+            typeInfo: 'DI.DiagramElement',
+            type: 'elementRef'
+          }]
+      }, {
         localName: 'DMNDI',
         propertyInfos: [{
             name: 'dmnDiagram',
@@ -111,87 +185,17 @@ var DMNDI12_Module_Factory = function () {
             elementName: 'DMNStyle',
             typeInfo: '.DMNStyle'
           }]
-      }, {
-        localName: 'DMNStyle',
-        baseTypeInfo: 'DI.Style',
-        propertyInfos: [{
-            name: 'otherAttributes',
-            type: 'anyAttribute'
-          }, {
-            name: 'fillColor',
-            elementName: 'FillColor',
-            typeInfo: 'DC.Color'
-          }, {
-            name: 'strokeColor',
-            elementName: 'StrokeColor',
-            typeInfo: 'DC.Color'
-          }, {
-            name: 'fontColor',
-            elementName: 'FontColor',
-            typeInfo: 'DC.Color'
-          }, {
-            name: 'fontFamily',
-            attributeName: {
-              localPart: 'fontFamily'
-            },
-            type: 'attribute'
-          }, {
-            name: 'fontSize',
-            typeInfo: 'Double',
-            attributeName: {
-              localPart: 'fontSize'
-            },
-            type: 'attribute'
-          }, {
-            name: 'fontItalic',
-            typeInfo: 'Boolean',
-            attributeName: {
-              localPart: 'fontItalic'
-            },
-            type: 'attribute'
-          }, {
-            name: 'fontBold',
-            typeInfo: 'Boolean',
-            attributeName: {
-              localPart: 'fontBold'
-            },
-            type: 'attribute'
-          }, {
-            name: 'fontUnderline',
-            typeInfo: 'Boolean',
-            attributeName: {
-              localPart: 'fontUnderline'
-            },
-            type: 'attribute'
-          }, {
-            name: 'fontStrikeThrough',
-            typeInfo: 'Boolean',
-            attributeName: {
-              localPart: 'fontStrikeThrough'
-            },
-            type: 'attribute'
-          }, {
-            name: 'labelHorizontalAlignement',
-            typeInfo: 'DC.AlignmentKind',
-            attributeName: {
-              localPart: 'labelHorizontalAlignement'
-            },
-            type: 'attribute'
-          }, {
-            name: 'labelVerticalAlignment',
-            typeInfo: 'DC.AlignmentKind',
-            attributeName: {
-              localPart: 'labelVerticalAlignment'
-            },
-            type: 'attribute'
-          }]
       }],
     elementInfos: [{
+        typeInfo: '.DMNEdge',
+        elementName: 'DMNEdge',
+        substitutionHead: 'DMNDiagramElement'
+      }, {
+        typeInfo: '.DMNDI',
+        elementName: 'DMNDI'
+      }, {
         typeInfo: '.DMNLabel',
         elementName: 'DMNLabel'
-      }, {
-        typeInfo: '.DMNDecisionServiceDividerLine',
-        elementName: 'DMNDecisionServiceDividerLine'
       }, {
         typeInfo: '.DMNStyle',
         elementName: 'DMNStyle',
@@ -200,22 +204,18 @@ var DMNDI12_Module_Factory = function () {
           namespaceURI: 'http:\/\/www.omg.org\/spec\/DMN\/20180521\/DI\/'
         }
       }, {
+        typeInfo: '.DMNShape',
+        elementName: 'DMNShape',
+        substitutionHead: 'DMNDiagramElement'
+      }, {
         typeInfo: '.DMNDiagram',
         elementName: 'DMNDiagram'
-      }, {
-        typeInfo: '.DMNDI',
-        elementName: 'DMNDI'
       }, {
         typeInfo: 'DI.DiagramElement',
         elementName: 'DMNDiagramElement'
       }, {
-        typeInfo: '.DMNEdge',
-        elementName: 'DMNEdge',
-        substitutionHead: 'DMNDiagramElement'
-      }, {
-        typeInfo: '.DMNShape',
-        elementName: 'DMNShape',
-        substitutionHead: 'DMNDiagramElement'
+        typeInfo: '.DMNDecisionServiceDividerLine',
+        elementName: 'DMNDecisionServiceDividerLine'
       }]
   };
   return {
