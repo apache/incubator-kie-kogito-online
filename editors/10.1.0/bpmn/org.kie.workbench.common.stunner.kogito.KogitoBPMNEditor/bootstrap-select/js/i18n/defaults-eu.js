@@ -1,0 +1,2 @@
+/*! For license information please see defaults-eu.js.LICENSE.txt */
+!function(e,t){"function"==typeof define&&define.amd?define(["jquery"],(function(e){return t(e)})):"object"==typeof exports?module.exports=t(require("jquery")):t(jQuery)}(0,(function(e){e.fn.selectpicker.defaults={noneSelectedText:"Hautapenik ez",noneResultsText:"Emaitzarik ez {0}",countSelectedText:"{1}(e)tik {0} hautatuta",maxOptionsText:["Mugara iritsita ({n} {var} gehienez)","Taldearen mugara iritsita ({n} {var} gehienez)",["elementu","elementu"]],multipleSeparator:", "}}));
