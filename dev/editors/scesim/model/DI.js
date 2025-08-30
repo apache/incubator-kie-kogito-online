@@ -50,28 +50,6 @@ var DI_Module_Factory = function () {
             type: 'attribute'
           }]
       }, {
-        localName: 'DiagramElement.Extension',
-        typeName: null,
-        propertyInfos: [{
-            name: 'any',
-            minOccurs: 0,
-            collection: true,
-            mixed: false,
-            type: 'anyElement'
-          }]
-      }, {
-        localName: 'Edge',
-        baseTypeInfo: '.DiagramElement',
-        propertyInfos: [{
-            name: 'otherAttributes',
-            type: 'anyAttribute'
-          }, {
-            name: 'waypoint',
-            minOccurs: 0,
-            collection: true,
-            typeInfo: 'DC.Point'
-          }]
-      }, {
         localName: 'Diagram',
         baseTypeInfo: '.DiagramElement',
         propertyInfos: [{
@@ -98,6 +76,18 @@ var DI_Module_Factory = function () {
             type: 'attribute'
           }]
       }, {
+        localName: 'Edge',
+        baseTypeInfo: '.DiagramElement',
+        propertyInfos: [{
+            name: 'otherAttributes',
+            type: 'anyAttribute'
+          }, {
+            name: 'waypoint',
+            minOccurs: 0,
+            collection: true,
+            typeInfo: 'DC.Point'
+          }]
+      }, {
         localName: 'Shape',
         baseTypeInfo: '.DiagramElement',
         propertyInfos: [{
@@ -113,6 +103,16 @@ var DI_Module_Factory = function () {
           }]
       }, {
         localName: 'Style.Extension',
+        typeName: null,
+        propertyInfos: [{
+            name: 'any',
+            minOccurs: 0,
+            collection: true,
+            mixed: false,
+            type: 'anyElement'
+          }]
+      }, {
+        localName: 'DiagramElement.Extension',
         typeName: null,
         propertyInfos: [{
             name: 'any',
